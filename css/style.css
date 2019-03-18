@@ -1,0 +1,32 @@
+body {
+    	font-family: sans-serif;
+	background-color: #FFF;
+	color: #000;
+	line-height: 1.5;
+	font-size: 1em;
+}
+.loader {
+	display: none;
+}
+.title {
+	display: inline;
+}
+a {
+	color: #2196F3;
+	text-decoration: underline;
+}
+a:hover {
+	color: #2196F3;
+	text-decoration: none;
+}
+.address {
+	cursor: pointer;
+}
+.divider {
+	background-color: #FFF;
+	content: '';
+	display: block;
+	height: 7px;
+	position: absolute;
+	width: 80px;
+}
