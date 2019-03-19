@@ -1,1 +1,18 @@
-[alexzava.com](https://alexzava.com)
+# Alex Zava
+
+## Who am i
+Computer science student at the University of Pisa.
+
+**Tor Relay**: [[075D1432C32DCDA926A7539454454E635F91D8BD]](https://metrics.torproject.org/rs.html#details/075D1432C32DCDA926A7539454454E635F91D8BD)
+
+## Contact
+
+**Email**: mail at alexzava dot com
+
+**PGP**: 56F9 D67B 7930 E090 5469 8885 B5FC 83FC D888 F094 [[Public Key]](pubkey.asc)
+
+**Bitcoin**: 1Pph6DEuTXVdmmCeLe9AjDWH5PjrZQnr8b
+
+**Monero**: 49Dgck21LgxAV14owBQ6gNAPZH1yqCesD6BRsDxJMeBh5Co1ANTtx6wcm4sREvNJhiJDyxH92suWJBuidPKCrrUcVQfqxzK
+
+**Website**: [alexzava.com](https://alexzava.com)
