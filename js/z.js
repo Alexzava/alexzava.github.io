@@ -77,6 +77,6 @@ var h = window.innerHeight
 || document.body.clientHeight;
 
 if(navigator.appVersion.indexOf('Android') != -1 || navigator.appVersion.indexOf('iPhone') != -1 || w < 415)
-	relay_fingerprint.innerHTML = "Relay";
+	relay_fingerprint.innerHTML = "Fingerprint";
 
 
