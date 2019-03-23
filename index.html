@@ -1,52 +1,30 @@
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="description" content="Computer science student at the University of Pisa.">
-	<meta name="keywords" content="alexzava, Alex Zava, Alex, Zava, alexzava.com">
-	<title>Alex Zava</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
-</head>
-<body onload="start()">
-	<div class="container">
-		<header>
-			<span class="loader obfuscate">01234</span>
-			<h1 class="title"><b class="obfuscate">Alex Zava</b></h1>
-		</header>
-		<br>
-		<article>
-			<h5><b>Who am i</b></h5>
-			<p>Computer science student at the <span class="obfuscate">University</span> of <span class="obfuscate">Pisa</span>.<br>
-			<br>
-			<span class="obfuscate">Tor Relay</span>: [<a id="relay_fingerprint" href="https://metrics.torproject.org/rs.html#details/075D1432C32DCDA926A7539454454E635F91D8BD" alt="Tor Relay" target="_blank">075D1432C32DCDA926A7539454454E635F91D8BD</a>]</p>
-		</article>
-		<br>
-		<article>
-			<h5 id="contact"><b class="obfuscate">Contact</b></h5>
-			<strong>Email:</strong> <span class="obfuscate">mail[at]alexzava[dot]com</span>
-			<br>
-			<strong>Github:</strong> <a class="obfuscate" href="https://github.com/alexzava" target="_blank" alt="Github">alexzava</a>
-			<br>
-			<strong>PGP: </strong>
-			<span class="">56F9</span>
-			<span class="">D67B</span>
-			<span class="">7930</span>
-			<span class="">E090</span>
-			<span class="">5469</span>
-			<span class="">8885</span>
-			<span class="">B5FC</span>
-			<span class="">83FC</span>
-			<span class="">D888</span>
-			<span class="">F094</span>
-			[<a href="pubkey.asc" alt="pubkey">Public Key</a>]
-			<br>
-			<strong>Bitcoin:</strong> <span id="btcaddress" class="address" address="1Pph6DEuTXVdmmCeLe9AjDWH5PjrZQnr8b">[Show Address]</span>
-			<br>
-			<strong>Monero:</strong> <span id="xmraddress" class="address" address="49Dgck21LgxAV14owBQ6gNAPZH1yqCesD6BRsDxJMeBh5Co1ANTtx6wcm4sREvNJhiJDyxH92suWJBuidPKCrrUcVQfqxzK">[Show Address]</span>
-		</article>
-		<br>
-	</div>
-	<script src="js/z.js"></script>
-</body>
-</html>
+---
+layout: default
+title: Home
+---
+
+<!-- Who am i -->
+<h3>Who am i</h3>
+<p>
+My name is <b class="obfuscate">Alessandro</b> AKA <b class="obfuscate">alexzava</b> and I am a computer science student at the University of Pisa.
+</p>
+<p>Tor Relay: [<a id="relay_fingerprint" href="https://metrics.torproject.org/rs.html#details/075D1432C32DCDA926A7539454454E635F91D8BD" alt="Tor Relay" target="_blank">075D1432C32DCDA926A7539454454E635F91D8BD</a>]</p>
+
+<!-- Blog Posts -->
+<h3>Articles</h3>
+<ul>
+  {% for post in paginator.posts %}
+    <li>[{{post.date | date_to_string}}] <a href="{{ post.url }}" class="obfuscate" style="font-weight: bold;">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+
+<!-- Contact -->
+<h3>Contact</h3>
+<p>
+  <b>Email</b>: mail[at]alexzava[dot]com<br>
+  <b>Github</b>: <a href="https://github.com/alexzava" target="_blank" alt="Github">alexzava</a><br>
+  <b>PGP</b>: <a href="pubkey.asc" alt="PGP Public Key">56F9 D67B 7930 E090 5469 8885 B5FC 83FC D888 F094</a><br>
+  <b>Bitcoin</b>: <span id="btcaddress" style="cursor: pointer;" address="1Pph6DEuTXVdmmCeLe9AjDWH5PjrZQnr8b">[Show Address]</span><br>
+</p>
+
+<script src="public/js/index.js"></script>

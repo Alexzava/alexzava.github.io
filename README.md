@@ -13,6 +13,4 @@ Computer science student at the University of Pisa.
 
 **Bitcoin**: 1Pph6DEuTXVdmmCeLe9AjDWH5PjrZQnr8b
 
-**Monero**: 49Dgck21LgxAV14owBQ6gNAPZH1yqCesD6BRsDxJMeBh5Co1ANTtx6wcm4sREvNJhiJDyxH92suWJBuidPKCrrUcVQfqxzK
-
 **Website**: [alexzava.com](https://alexzava.com)

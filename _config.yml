@@ -1,0 +1,23 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+gems:                [jekyll-paginate]
+
+# Setup
+title:               Alex Zava
+tagline:             ''
+description:         'Alex Zava'
+url:                 https://alexzava.com
+baseurl:             ''
+paginate:            5
+
+# About/contact
+author:
+  name:              Alex Zava
+  email:             mail@alexzava.com
+  twitter:           https://twitter.com/alexzava_
+  github:            https://github.com/alexzava
+
+# Custom vars
+version:             1.0.0
