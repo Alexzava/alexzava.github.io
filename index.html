@@ -4,14 +4,14 @@ title: Home
 ---
 
 <!-- Who am i -->
-<h3>Who am i</h3>
+<h2>Who am i</h2>
 <p>
 My name is <b class="obfuscate">Alessandro</b> AKA <b class="obfuscate">alexzava</b> and I am a computer science student at the University of Pisa.
 </p>
 <p>Tor Relay: [<a id="relay_fingerprint" href="https://metrics.torproject.org/rs.html#details/075D1432C32DCDA926A7539454454E635F91D8BD" alt="Tor Relay" target="_blank">075D1432C32DCDA926A7539454454E635F91D8BD</a>]</p>
 
 <!-- Blog Posts -->
-<h3>Articles</h3>
+<h2>Articles</h2>
 <ul>
   {% for post in paginator.posts %}
     <li>[{{post.date | date_to_string}}] <a href="{{ post.url }}" class="obfuscate" style="font-weight: bold;">{{ post.title }}</a></li>
@@ -19,10 +19,11 @@ My name is <b class="obfuscate">Alessandro</b> AKA <b class="obfuscate">alexzava
 </ul>
 
 <!-- Contact -->
-<h3>Contact</h3>
+<h2>Get in touch</h2>
 <p>
   <b>Email</b>: mail[at]alexzava[dot]com<br>
-  <b>Github</b>: <a href="https://github.com/alexzava" target="_blank" alt="Github">alexzava</a><br>
+  <b>GitHub</b>: <a href="https://github.com/alexzava" target="_blank" alt="GitHub">alexzava</a><br>
+  <b>Twitter</b>: <a href="https://twitter.com/alexzava_" target="_blank" alt="Twitter">@alexzava_</a><br>
   <b>PGP</b>: <a href="pubkey.asc" alt="PGP Public Key">56F9 D67B 7930 E090 5469 8885 B5FC 83FC D888 F094</a><br>
   <b>Bitcoin</b>: <span id="btcaddress" style="cursor: pointer;" address="1Pph6DEuTXVdmmCeLe9AjDWH5PjrZQnr8b">[Show Address]</span><br>
 </p>
