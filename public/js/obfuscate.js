@@ -6,8 +6,9 @@ for(var i = 0; i < elements.length; i++) {
 	elements[i].innerHTML = random_str(elements[i].innerHTML.length);
 }
 
-// Start
-setInterval(deobfs, speed);
+window.onload = function() {
+	setInterval(deobfs, speed);
+};
 
 var j = 0;
 var x = 0;
