@@ -1,0 +1,30 @@
+---
+layout: default
+title: Home
+---
+
+<!-- Who am i -->
+<p>
+My name is <strong class="obfuscate">Alessandro</strong> AKA <strong class="obfuscate">alexzava</strong> I am a computer science student at the <strong class="obfuscate">University of Pisa</strong> and I work as a <strong class="obfuscate">freelance developer</strong>.
+</p>
+
+<!-- Blog Posts -->
+<h2>Articles</h2>
+<ul>
+  {% for post in paginator.posts %}
+    <li>[{{post.date | date_to_string}}] <a href="{{ post.url }}" style="font-weight: bold;">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+
+<!-- Contact -->
+<h3>Get in touch</h3>
+<p>
+  <b>Email</b>: mail[at]alexzava[dot]com<br>
+  <b>GitHub</b>: <a href="https://github.com/alexzava" target="_blank" alt="GitHub">alexzava</a><br>
+  <b>PGP</b>: <a href="pubkey.asc" alt="PGP Public Key">E886 9640 7153 1B33 FBC0 1FA8 0DC8 0B68 60FD 1D0A</a><br>
+  <b>Bitcoin</b>: <span id="btcaddress" style="cursor: pointer;" address="1Pph6DEuTXVdmmCeLe9AjDWH5PjrZQnr8b">[Show Address]</span><br>
+</p>
+
+<p style="font-size: 0.7em;">*I am open to any job proposals as a remote backend/frontend developer.<br>Contact me for any information.</p>
+
+<script src="/public/js/index.js"></script>

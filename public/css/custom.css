@@ -1,4 +1,93 @@
-strong, .black {
-	background-color: #000;
-	color: #FFF;
+body {
+    background: #e65c00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e65c00, #F9D423);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e65c00, #F9D423); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-size: 400% 400%;
+    animation: gradientBG 30s ease infinite;
+    overflow: hidden;
+}
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container-fluid {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+.quotes {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color: #FFF;
+}
+.reminder {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #FFF;
+    text-transform: uppercase;
+    opacity: 0.3;
+}
+.reminder>.desktop {
+    display: block;
+}
+.reminder>.mobile {
+    display: none;
+}
+.contact {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #FFF;
+    opacity: 0.5;
+}
+
+.black {
+    color: #000;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+h1::after {
+    content: '';
+    width: 12%;
+    height: 3px;
+    background-color: #FFF;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    border-radius: 10px;
+    transition: all 500ms ease;
+}
+
+h1:hover::after {
+    left: 0%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 390px) {
+  h1 {
+    font-size: 2.3em;
+  }
+  .reminder>.desktop {
+    display: none;
+  }
+  .reminder>.mobile {
+    display: block;
+  }
 }
