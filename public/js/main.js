@@ -1,6 +1,6 @@
 var scenes = [
 	'<span class="baffle">ALEX</span> <span class="black baffle">ZAVA</span>',
-	'<span class="black baffle">Digital Humanities</span> <span class="buffle">student</span>',
+	'<span class="black baffle">Digital Humanities</span> <span class="baffle">student</span>',
 	'<i class="fa fa-map-marker black" aria-hidden="true"></i> <span class="baffle">University of Pisa</span>'
 ];
 var actualScene = 0;
