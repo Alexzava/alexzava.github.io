@@ -29,7 +29,12 @@ var listaRegioni =[
 	"Veneto"
 ];
 
+var isMobile = false;
+
 window.onload = function() {
+	if(screen.width <= 900)
+		isMobile = true;
+
 	var menuRegioni = document.getElementById("listaRegioni");
 	for(var i = 0; i < listaRegioni.length; i++) {
 		var link = document.createElement("a");
@@ -56,6 +61,9 @@ window.onload = function() {
 // data => dataset
 // label => string
 function createChart(data, label) {
+	if(isMobile)
+		data = sliceDataset(data, (data.length-3), data.length);
+	
 	var totale_casi = datasetsParametro(data, "totale_casi", "Casi totali", "#FF0000");
 	var deceduti = datasetsParametro(data, "deceduti", "Deceduti", "#2196F3");
 	var dimessi_guariti = datasetsParametro(data, "dimessi_guariti", "Dismessi guariti", "#66BB6A");
@@ -75,7 +83,7 @@ function createChart(data, label) {
 	drawChart("ricoverati_con_sintomi", ricoverati_con_sintomi);
 	drawChart("terapia_intensiva", terapia_intensiva);
 	drawChart("totale_ospedalizzati", totale_ospedalizzati);
-	drawChart("nuovi_attualmente_positivi", nuovi_attualmente_positivi);
+	//drawChart("nuovi_attualmente_positivi", nuovi_attualmente_positivi);
 	drawChart("totale_attualmente_positivi", totale_attualmente_positivi);
 
 	document.getElementById("titoloPagina").innerHTML = label;

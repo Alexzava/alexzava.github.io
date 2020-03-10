@@ -59,7 +59,7 @@
 		<div class="container-fluid" id="mainContainer">
 			<div class="alert alert-warning alert-dismissible fade show" role="alert">
 				<strong>Il progetto è in fase di sviluppo</strong>. 
-				A breve verranno aggiunte nuove funzionalità. La versione mobile non funziona correttamente!
+				A breve verranno aggiunte nuove funzionalità
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -80,14 +80,14 @@
 						<a href="javascript:void(0)" onclick="zoomChart(this)"><i class="material-icons">aspect_ratio</i></a>
 						<a href="javascript:void(0)" onclick="hideChart(this);"><i class="material-icons">close</i></a>
 					</div>
-					<canvas id="deceduti"></canvas>
+					<canvas id="totale_attualmente_positivi"></canvas>
 				</div>
 				<div class="col-md-6">
 					<div class="col-md-12 icon-box">
 						<a href="javascript:void(0)" onclick="zoomChart(this)"><i class="material-icons">aspect_ratio</i></a>
 						<a href="javascript:void(0)" onclick="hideChart(this);"><i class="material-icons">close</i></a>
 					</div>
-					<canvas id="dimessi_guariti"></canvas>
+					<canvas id="deceduti"></canvas>
 				</div>
 				<div class="col-md-6">
 					<div class="col-md-12 icon-box">
@@ -101,7 +101,14 @@
 						<a href="javascript:void(0)" onclick="zoomChart(this)"><i class="material-icons">aspect_ratio</i></a>
 						<a href="javascript:void(0)" onclick="hideChart(this);"><i class="material-icons">close</i></a>
 					</div>
-					<canvas id="isolamento_domiciliare"></canvas>
+					<canvas id="totale_ospedalizzati"></canvas>
+				</div>
+				<div class="col-md-6">
+					<div class="col-md-12 icon-box">
+						<a href="javascript:void(0)" onclick="zoomChart(this)"><i class="material-icons">aspect_ratio</i></a>
+						<a href="javascript:void(0)" onclick="hideChart(this);"><i class="material-icons">close</i></a>
+					</div>
+					<canvas id="dimessi_guariti"></canvas>
 				</div>
 				<div class="col-md-6">
 					<div class="col-md-12 icon-box">
@@ -117,26 +124,19 @@
 					</div>
 					<canvas id="terapia_intensiva"></canvas>
 				</div>
-				<div class="col-md-6">
-					<div class="col-md-12 icon-box">
-						<a href="javascript:void(0)" onclick="zoomChart(this)"><i class="material-icons">aspect_ratio</i></a>
-						<a href="javascript:void(0)" onclick="hideChart(this);"><i class="material-icons">close</i></a>
-					</div>
-					<canvas id="totale_ospedalizzati"></canvas>
-				</div>
-				<div class="col-md-6">
+				<!--<div class="col-md-6">
 					<div class="col-md-12 icon-box">
 						<a href="javascript:void(0)" onclick="zoomChart(this)"><i class="material-icons">aspect_ratio</i></a>
 						<a href="javascript:void(0)" onclick="hideChart(this);"><i class="material-icons">close</i></a>
 					</div>
 					<canvas id="nuovi_attualmente_positivi"></canvas>
-				</div>
+				</div>-->
 				<div class="col-md-6">
 					<div class="col-md-12 icon-box">
 						<a href="javascript:void(0)" onclick="zoomChart(this)"><i class="material-icons">aspect_ratio</i></a>
 						<a href="javascript:void(0)" onclick="hideChart(this);"><i class="material-icons">close</i></a>
 					</div>
-					<canvas id="totale_attualmente_positivi"></canvas>
+					<canvas id="isolamento_domiciliare"></canvas>
 				</div>
 			</div>
 		</div>

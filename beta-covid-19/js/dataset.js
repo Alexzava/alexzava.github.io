@@ -69,6 +69,16 @@ function datasetConversion(data) {
 	return outData;
 }
 
+// Ritorna una parte selezionata del dataset
+// data => dataset manipolato
+// from => int
+// to => int
+function sliceDataset(data, from, to) {
+	if(to > data.length || from < 0)
+		return undefined;
+	return data.slice(from, to);
+}
+
 // Ritorna un dataset per il grafico filtrando uno specifico parametro
 // data => dataset manipolato
 // parametro => string
