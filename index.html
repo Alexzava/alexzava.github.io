@@ -5,41 +5,90 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <meta name="description" content="Digital Humanities student at the University of Pisa. Freelance Developer.">
-        <meta name="keywords" content="alexzava, Alex Zava, Alex, Zava, alexzava.com, freelance developer, pisa university">
+        <meta name="description" content="Digital Humanities student at the University of Pisa. Freelance developer.">
+        <meta name="keywords" content="alexzava, Alex Zava, Alex, Zava, alexzava.com, freelance developer, pisa university, digital humanities">
 
         <title>Alex Zava</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="public/css/custom.css">
-    </head>
-    <body>
-        <!-- STUFF -->
-        <div class="container-fluid" id="swipezone">
-            <div class="reminder" id="reminder">
-                <p class="desktop" id="desktopReminder">Try to click</p>
-                <p class="mobile">Try to swipe</p>
-            </div>
-            <div class="quotes">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
-                <div>
-                    <h1 id="mainText" class="text-center"></h1>
-                </div>
-            </div>
-            <div class="contact">
-                <p><span class="black">mail</span>[at]<span class="black">alexzava</span>[dot]<span class="black">com</span></p>
-            </div>
-
-        </div>
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/animations.css">
 
         <!-- JS -->
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="public/js/baffle.min.js"></script>
-        <script src="public/js/main.js"></script>
-        <script src="public/js/swipe.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+
+    </head>
+    <body>
+        <!-- MAIN -->
+        <main>
+
+            <div id="loader">
+                <span class="middle dot"></span>
+            </div>
+
+            <div id="menu-btn">
+                <a href="javascript:void(0)" onclick="toggleMenu()">
+                    <img src="images/menu_dot.png" id="openMenu">
+                    <img src="images/menu_close.png" id="closeMenu">
+                </a>
+            </div>
+
+            <div id="menu">
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="menuGoTo('#home')">Home</a></li>
+                    <li><a href="javascript:void(0)"onclick="menuGoTo('#contact')">Contact</a></li>
+                    <li><a href="javascript:void(0)"onclick="menuGoTo('#portfolio')">Portfolio</a></li>
+                </ul>
+            </div>
+
+            <section id="home">
+                <article class="container middle text-center">
+                    <h1 id="main-title">ALEX ZAVA</h1>
+                    <p>DIGITAL HUMANITIES - University of Pisa</p>
+                    <p><i class="fa fa-map-marker"></i> Italy</p>
+                </article>
+
+                <div class="down-arrow">
+                    <a href="#contact">
+                        <img src="images/arrow.png">
+                    </a>
+                </div>
+            </section>
+
+            <section id="contact">
+                <article class="container middle text-center">
+                    <h2>Contact info</h2>
+                    <p>
+                        <a href="javascript:void(0);" onclick="antiSpam(this);" class="btn btn-outline-light"><i class="fa fa-envelope" aria-hidden="true"></i> email</a>
+                        <a href="https://github.com/alexzava" target="_blank" class="btn btn-outline-light"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
+                    </p>
+                </article>
+
+                <div class="down-arrow">
+                    <a href="#portfolio">
+                        <img src="images/arrow.png">
+                    </a>
+                </div>
+            </section>
+
+            <section id="portfolio">
+                <article class="container middle text-center">
+                    <h2>Portfolio</h2>
+                    <p>Work in progress...</p>
+                </article>
+
+                <div class="up-arrow">
+                    <a href="#home">
+                        <img src="images/arrow.png">
+                    </a>
+                </div>
+            </section>
+
+        </main>
     </body>
 </html>
