@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% if page.title %}{{ page.title }} - {% endif %} {{ site.name }}</title>
+
+        <!-- META -->
+        {% include meta.html %}
+
+        <!-- CSS -->
+        {% include style.html %}
+
+        <!-- JS -->
+        {% include script.html %}
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header>
+            <div id="menu-btn">
+                <a href="javascript:void(0)" onclick="toggleMenu()">
+                    <img src="/images/menu_dot.png" id="openMenu" alt="menu open icon">
+                    <img src="/images/menu_close.png" id="closeMenu" alt="menu close icon">
+                </a>
+            </div>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="https://italiacovid19.it" target="_blank">COVID-19</a></li>
+                    <!--li><a href="/hire/" target="_blank">Hire me</a></li>-->
+                    <li>
+                        <a href="https://github.com/alexzava" target="_blank" class="pr-20"><i class="fab fa-github"></i></a> 
+                        <a href="javascript:void(0);" onclick="antiSpam(this);"><i class="fa fa-envelope"></i></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <section class="top-icons">
+                <ul>
+                    <li><a href="https://github.com/alexzava" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a href="javascript:void(0);" onclick="antiSpam(this);"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </section>
+        </header>
+
+        <!-- MAIN -->
+        <main>
+            {{content}}
+        </main>
+
+        <footer>
+            <img class="sign" src="/images/sign.png" width="10%">
+        </footer>
+
+        <div id="loader">
+            <span class="middle dot"></span>
+        </div>
+    </body>
+</html>

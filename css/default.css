@@ -7,13 +7,14 @@ body {
 	margin: 0;
 
     background: #8A2387;
-    background: -webkit-linear-gradient(30deg, #8A2387, #E94057, #F27121);
     background: linear-gradient(30deg, #8A2387, #E94057, #F27121);
+
     background-size: 500% 500%;
     animation: gradientBG 30s ease infinite;
 
     color: #FFF;
-    text-transform: uppercase;
+
+    font-family: 'Open Sans', sans-serif;
 }
 
 main {
@@ -21,18 +22,36 @@ main {
 	height: 100vh;
 }
 
-main > section {
-	width: 100%;
-	height: 100%;
-    position: relative;
-}
-
 h1 {
     font-size: 3em;
+    font-weight: normal;
+    margin: 0;
 }
 
-h2 {
-    margin-bottom: 60px;
+ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+.pt-80 {
+    padding-top: 80px;
+}
+
+.pr-20 {
+    padding-right: 20px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
 }
 
 #loader {
@@ -85,16 +104,18 @@ h2 {
     top: 50%;
     left:50%;
     transform: translate(-50%,-50%);
+}
 
-    list-style-type: none;
-    text-align: center;
-    padding: 0;
+#menu>ul>li {
+    padding-top: 10px;
 }
 
 #menu>ul>li>a {
     text-decoration: none;
     color: #FFF;
-    font-size: 1.5em;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .black {
@@ -108,18 +129,38 @@ h2 {
     transform: translate(-50%,-50%);
 }
 
-.down-arrow, .up-arrow {
-	position: absolute;
-	bottom: 5%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    animation: bounce 1s linear infinite;
+.top-icons {
+    position: absolute;
+    top: 0px;
+    right: 10px;
 }
 
-.down-arrow>a>img, .up-arrow>a>img {
-	width: 64px;
+.top-icons ul li {
+    display: inline-block;
+    padding-right: 10px;
 }
 
-.up-arrow>a>img {
-    transform: rotate(180deg);
+.top-icons ul li a {
+    font-size: 1.5em;
+    color: #FFF;
+}
+
+.buttons {
+    padding-top: 20px;
+}
+
+.buttons ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.hireme {
+    text-transform: none;
+}
+
+.sign {
+    width: 150px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
