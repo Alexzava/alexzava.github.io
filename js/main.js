@@ -1,19 +1,20 @@
-var nospam = "bWFpbEBhbGV4emF2YS5jb20="; 
+var nospam = "bWFpbEBhbGV4emF2YS5jb20=";
 var menu = false;
+var cyberMode = false;
 
 window.onload = function() {
+
+	VanillaTilt.init(document.querySelector(".tilt"), {
+		max: 10,
+		speed: 60
+	});
+
 	// Hide loader
 	document.getElementById("loader").style = "display: none;";
 
 	let title = document.getElementById("main-title");
 	if(title) {
 		title.classList.add("animate-neon");
-	}
-
-	var currentdate = new Date();
-	if((currentdate.getHours() > 19 && currentdate.getHours() <= 23) || (currentdate.getHours() >= 0 && currentdate.getHours() < 8)) {
-		console.log("Good night");
-		document.body.style.backgroundImage = "linear-gradient(30deg, #cc2b5e, #753a88)";
 	}
 };
 
@@ -25,20 +26,36 @@ function antiSpam(e) {
 function toggleMenu() {
 	$('#menu').fadeToggle("slow", "linear");
 
-	if(menu) {
-		menu = false;
-		document.getElementById("openMenu").style = "display: block;";
-		document.getElementById("closeMenu").style = "display: none;";
-	}
-	else {
-		menu = true;
-		document.getElementById("openMenu").style = "display: none;";
-		document.getElementById("closeMenu").style = "display: block;";
-
+	let menuBtn = document.getElementById("menu-btn");
+	if(menuBtn) {
+		if(menu) {
+			menu = false;
+			menuBtn.textContent = "";
+			let ic = document.createElement("i");
+			ic.classList.add("fas", "fa-bars");
+			menuBtn.appendChild(ic);
+		}
+		else {
+			menu = true;
+			menuBtn.textContent = "";
+			let ic = document.createElement("i");
+			ic.classList.add("fa", "fa-times");
+			menuBtn.appendChild(ic);
+		}
 	}
 }
 
-/*function menuGoTo(element) {
-	toggleMenu();
-	document.querySelector(element).scrollIntoView();
-}*/
+function enableCyberMode() {
+	if(cyberMode) {
+		document.body.classList.remove("cyber");
+		cyberMode = false;
+	} else {
+		document.body.classList.add("cyber");
+		let b = baffle('.obfuscate', {
+			speed: 80,
+			characters: "█▒▓░ ░▒▓▒ █▒▓ ██/▓ ▒<▓▓░ ░░▓ ▓█/░░ ▒░█░░ ▒░▒",
+		}).start();
+		b.reveal(4000);
+		cyberMode = true;
+	}
+}

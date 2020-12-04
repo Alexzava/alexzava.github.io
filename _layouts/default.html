@@ -15,12 +15,11 @@
     <body>
         <!-- HEADER -->
         <header>
-            <div id="menu-btn">
-                <a href="javascript:void(0)" onclick="toggleMenu()">
-                    <img src="/images/menu_dot.png" id="openMenu" alt="menu open icon">
-                    <img src="/images/menu_close.png" id="closeMenu" alt="menu close icon">
-                </a>
-            </div>
+            <a href="javascript:void(0)" onclick="toggleMenu()" id="menu-btn">
+                <!--<img src="/images/menu_dot.png" id="openMenu" alt="menu open icon">
+                <img src="/images/menu_close.png" id="closeMenu" alt="menu close icon">-->
+                <i class="fas fa-bars"></i>
+            </a>
 
             <nav id="menu">
                 <ul>
@@ -29,7 +28,7 @@
                     <!--li><a href="/hire/" target="_blank">Hire me</a></li>-->
                     <li>
                         <a href="https://github.com/alexzava" target="_blank" class="pr-20"><i class="fab fa-github"></i></a> 
-                        <a href="javascript:void(0);" onclick="antiSpam(this);"><i class="fa fa-envelope"></i></a>
+                        <a href="javascript:void(0);" onclick="antiSpam(this)"><i class="fa fa-envelope"></i></a>
                     </li>
                 </ul>
             </nav>
@@ -37,7 +36,7 @@
             <section class="top-icons">
                 <ul>
                     <li><a href="https://github.com/alexzava" target="_blank"><i class="fab fa-github"></i></a></li>
-                    <li><a href="javascript:void(0);" onclick="antiSpam(this);"><i class="fa fa-envelope"></i></a></li>
+                    <li><a href="javascript:void(0);" onclick="antiSpam(this)"><i class="fa fa-envelope"></i></a></li>
                 </ul>
             </section>
         </header>
@@ -48,7 +47,7 @@
         </main>
 
         <footer>
-            <img class="sign" src="/images/sign.png" width="10%">
+           <a href="javascript:void(0)" onclick="enableCyberMode()" class="bottom-icon"><i class="fas fa-lightbulb"></i></a>
         </footer>
 
         <div id="loader">

@@ -7,7 +7,7 @@ body {
 	margin: 0;
 
     background: #8A2387;
-    background: linear-gradient(30deg, #8A2387, #E94057, #F27121);
+    background: linear-gradient(30deg, #f5af19, #f12711);
 
     background-size: 500% 500%;
     animation: gradientBG 30s ease infinite;
@@ -26,6 +26,7 @@ h1 {
     font-size: 3em;
     font-weight: normal;
     margin: 0;
+    text-shadow: 0px 0px 6px rgba(255,255,255, 0.5);
 }
 
 ul {
@@ -61,7 +62,7 @@ ul {
     z-index: 10;
     width: 100vw;
     height: 100vh;
-    background-color: #E94057;
+    background-color: #f5af19;
 }
 
 #loader .dot {
@@ -79,6 +80,9 @@ ul {
     top: 10px;
     left: 10px;
     background-color: transparent;
+
+    color: #FFF;
+    font-size: 1.5em;
 }
 
 #menu-btn:hover {
@@ -94,7 +98,7 @@ ul {
     width: 100vw;
     height: 100vh;
     z-index: 2;
-    background-color: rgba(54,14,53,0.9);
+    background-color: rgba(0, 0, 0, 0.7);
 
     display: none;
 }
@@ -158,9 +162,10 @@ ul {
     text-transform: none;
 }
 
-.sign {
-    width: 150px;
+.bottom-icon {
     position: absolute;
     bottom: 10px;
-    right: 10px;
+    right: 20px;
+    font-size: 1.5em;
+    color: #FFF;
 }
