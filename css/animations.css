@@ -78,3 +78,12 @@
 		opacity: 0;
 	}
 }
+
+@keyframes drop-animation {
+	0% {
+		transform: translateY(0vh);
+	}
+	100% {
+		transform: translateY(98vh);
+	}
+}
