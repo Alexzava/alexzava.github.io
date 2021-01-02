@@ -9,10 +9,6 @@ window.onload = function() {
 		speed: 60
 	});
 
-	rainDrops(10, document.body);
-
-	placeSanta();
-
 	// Hide loader
 	document.getElementById("loader").style = "display: none;";
 
@@ -65,7 +61,7 @@ function enableCyberMode() {
 }
 
 /* XMAS */
-function rainDrops(size, element) {
+/*function rainDrops(size, element) {
 	var posArr = [];
 	var lastDelay = 0;
 	while(posArr.length < size){
@@ -89,9 +85,9 @@ function rainDrops(size, element) {
 			element.append(drop);
 	    }
 	}
-}
+}*/
 
-function placeSanta() {
+/*function placeSanta() {
 	let innerTitle = document.getElementById("innerTitle");
 	let santa = document.getElementById("santa");
 	if(innerTitle && santa) {
@@ -105,4 +101,4 @@ function placeSanta() {
 		santa.style.top = santaY + "px";
 		santa.style.transform = "rotate(-20deg)";
 	}
-}
+}*/
