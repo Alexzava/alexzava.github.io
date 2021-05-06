@@ -21,7 +21,6 @@ window.onload = function() {
 function antiSpam(e) {
 	e.onclick = "";
 	e.href = "mailto:" + window.atob(nospam);
-	e.href = "javascript:void(0)";
 }
 
 function toggleMenu() {
