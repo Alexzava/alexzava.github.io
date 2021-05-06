@@ -6,15 +6,18 @@ body {
 	overflow-x: hidden;
 	margin: 0;
 
-    background: #8A2387;
+    /*background: #8A2387;
     background: linear-gradient(30deg, #f5af19, #f12711);
 
     background-size: 500% 500%;
-    animation: gradientBG 30s ease infinite;
+    animation: gradientBG 30s ease infinite;*/
+
+    background: #212121;
 
     color: #FFF;
 
-    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -27,6 +30,16 @@ h1 {
     font-weight: normal;
     margin: 0;
     text-shadow: 0px 0px 6px rgba(255,255,255, 0.5);
+}
+
+.ph {
+    color: #000;
+    background-color: #f7971e;
+    border-radius: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    font-weight: bold;
 }
 
 ul {
@@ -62,7 +75,7 @@ ul {
     z-index: 10;
     width: 100vw;
     height: 100vh;
-    background-color: #f5af19;
+    background-color: #212121;
 }
 
 #loader .dot {
@@ -98,7 +111,7 @@ ul {
     width: 100vw;
     height: 100vh;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
 
     display: none;
 }
@@ -120,6 +133,8 @@ ul {
     font-size: 1.8em;
     text-transform: uppercase;
     text-align: center;
+
+    text-shadow: 0px 0px 6px rgba(255,255,255, 0.5);
 }
 
 .black {
@@ -170,10 +185,21 @@ ul {
     color: #FFF;
 }
 
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+footer .copy {
+    text-align: center;
+    opacity: 0.5;
+}
 
 /* XMAS */
 
-.rain-drop {
+/*.rain-drop {
     position: absolute;
     top: 0;
     left: 0;
@@ -196,4 +222,4 @@ ul {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
+}*/

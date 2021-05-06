@@ -21,6 +21,7 @@ window.onload = function() {
 function antiSpam(e) {
 	e.onclick = "";
 	e.href = "mailto:" + window.atob(nospam);
+	e.href = "javascript:void(0)";
 }
 
 function toggleMenu() {
@@ -45,7 +46,7 @@ function toggleMenu() {
 	}
 }
 
-function enableCyberMode() {
+/*function enableCyberMode() {
 	if(cyberMode) {
 		document.body.classList.remove("cyber");
 		cyberMode = false;
@@ -58,7 +59,7 @@ function enableCyberMode() {
 		b.reveal(4000);
 		cyberMode = true;
 	}
-}
+}*/
 
 /* XMAS */
 /*function rainDrops(size, element) {
