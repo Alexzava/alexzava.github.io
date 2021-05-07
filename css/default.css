@@ -174,10 +174,6 @@ ul {
     margin-right: 10px;
 }
 
-.hireme {
-    text-transform: none;
-}
-
 .bottom-icon {
     position: absolute;
     bottom: 10px;
@@ -195,32 +191,5 @@ footer {
 
 footer .copy {
     text-align: center;
-    opacity: 0.5;
+    opacity: 0.3;
 }
-
-/* XMAS */
-
-/*.rain-drop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2px;
-    height: 2px;
-    border-radius: 50%;
-    background-color: #FFF;
-    animation: drop-animation 2s linear infinite;
-    animation-delay: 0s;
-    box-shadow: 0px 0px 8px #FFF;
-}
-
-.xmas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    background-image: url("/images/xmas.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}*/
