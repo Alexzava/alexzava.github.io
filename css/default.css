@@ -193,3 +193,16 @@ footer .copy {
     text-align: center;
     opacity: 0.3;
 }
+
+.projects {
+    padding-top: 15px;
+}
+
+.projects li {
+    color: #FFF;
+    padding-bottom: 20px;
+}
+
+.projects a {
+    color: #FFF;
+}
