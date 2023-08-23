@@ -5,8 +5,8 @@ html {
 body {
 	overflow-x: hidden;
 	margin: 0;
-    background: #000;
-    color: #FFF;
+    /*background: #000;
+    color: #FFF;*/
 
     font-family: 'Roboto', sans-serif;
 }
@@ -46,9 +46,9 @@ header > ul > li {
 
 ul > li > a {
     text-decoration: none;
-    color: #FFF;
+    /*color: #FFF;*/
+    color: #000;
 
-    font-family: 'Inter', sans-serif;
     font-family: 'Zilla Slab Highlight', cursive;
 
     font-weight: bold;
@@ -67,7 +67,8 @@ ul > li > a {
 }
 
 .faded-text {
-    color: rgba(255, 255, 255, 0.5);
+    /*color: rgba(255, 255, 255, 0.5);*/
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .mb-5 {
@@ -100,6 +101,16 @@ ul > li > a {
 
 .show-mobile {
     display: none;
+}
+
+.loader {
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #FFF;
 }
 
 @media screen and (max-width: 550px) {

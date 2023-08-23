@@ -11,7 +11,9 @@ window.onload = function() {
 		characters: "$#/*+{}[]-_&%!?<>",
 	}).start()
 
-	b.reveal(4000)
+	$("#loader").fadeToggle("slow", () => {
+		b.reveal(4000)
+	})
 }
 
 function noSpam(e) {
