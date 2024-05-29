@@ -2,6 +2,7 @@
 _gh_pages
 _site
 .ruby-version
+TODO.md
 
 # Numerous always-ignore extensions
 *.diff
@@ -40,4 +41,4 @@ validation-report.json
 # Folders to ignore
 node_modules
 bower_components
-.jekyll-cache/
+.jekyll-cache

@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Archivo Black';
+    src: url('../fonts/Archivo Black (design)/ArchivoBlack-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Typefesse';
+    src: url('../fonts/Typefesse/Typefesse_Claire-Obscure.otf');
+}
+
+@font-face {
+  font-family: 'YoungSerif';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../fonts/YoungSerif/YoungSerif-Regular.otf');
+}
