@@ -5,16 +5,12 @@ const animatedTextStrings = [
 	"Full Stack Developer"
 ];
 var animatedTextCounter = 0
+var carouselLen = 4
+
+var experiencesCarousel
+var contactModal
 
 window.onload = () => {
-	// Navbar menu button
-	let menuButton = document.getElementById("menu-btn")
-	let mobileMenuButton = document.getElementById("mobile-menu-btn")
-	if(menuButton && mobileMenuButton) {
-		menuButton.onclick = toggleNavigation
-		mobileMenuButton.onclick = toggleNavigation
-	}
-
 	// Main section animated text
 	let infoAnimatedText = document.getElementById("info-animated-text")
 	let infoAnimatedBox = document.getElementById("info-animated-box")
@@ -25,20 +21,50 @@ window.onload = () => {
 		setInterval(() => { textScrollAnimation(infoAnimatedText) }, 3000)
 	}
 
-	// Animate horizontal scroll section
-	let section = document.querySelector('#projects')
-	let wrap = document.querySelector('.horizontal-container')
-	wrap.animate({
-		transform: ['', 'translateX(calc(-100% + 100vw))'],
-	},{
-		timeline: new ViewTimeline({
-			subject: section,
-			axis: 'block',
-		}),
-		fill: 'forwards',
-		rangeStart: 'contain 0%',
-		rangeEnd: 'contain 100%',
+	experiencesCarousel = document.querySelector('#experiences-carousel')
+
+	experiencesCarousel.addEventListener('slid.bs.carousel', event => {
+		carouselSetNextItem()
+		let counter = event.to + 1
+		let carouselCounterEl = document.getElementById("carousel-counter")
+		carouselCounterEl.textContent = counter + "/" + carouselLen
 	})
+
+	contactModal = document.querySelector('#contact-modal')
+	contactModal.addEventListener('hidden.bs.modal', event => {
+		let modalBody = document.querySelector("#contact-modal-body")
+		modalBody.textContent = ""
+	})
+	contactModal.addEventListener('show.bs.modal', event => {
+		let modalBody = document.querySelector("#contact-modal-body")
+		modalBody.textContent = window.atob(noSpamValue)
+	})
+
+	let copyEmailButton = document.querySelector("#copy-email-button")
+	copyEmailButton.onclick = () => {
+		if(navigator.clipboard) {
+			let modalBody = document.querySelector("#contact-modal-body")
+			navigator.clipboard.writeText(window.atob(noSpamValue))
+			modalBody.textContent = "Email copied!"
+		}
+	}
+}
+
+function carouselSetNextItem() {
+	let items = document.getElementsByClassName("carousel-item")
+	let itemNext;
+	for(let i = 0; i < items.length; i++) {
+		if(items[i].classList.contains("active")) {
+			if(i+1 == items.length) {
+				itemNext = items[0]
+			} else {
+				itemNext = items[i+1]
+			}
+			break
+		}
+	}
+	document.getElementsByClassName("carousel-next-item")[0].classList.remove("carousel-next-item")
+	itemNext.classList.add("carousel-next-item")
 }
 
 function textScrollAnimation(element) {
@@ -57,42 +83,6 @@ function textScrollAnimation(element) {
 	})
 }
 
-function toggleNavigation() {
-	let menuButton = document.getElementById("menu-btn")
-	let mobileMenuIcon = document.getElementById("mobile-menu-icon")
-	let navigation = document.getElementById("navigation")
-	if(window.getComputedStyle(navigation, null).display == "none") {
-		// Menu Button
-		let dataAlt = menuButton.textContent
-		menuButton.textContent = menuButton.getAttribute("data-alt")
-		menuButton.setAttribute("data-alt", dataAlt)
-
-		// Mobile Menu Button
-		mobileMenuIcon.classList.remove("iconoir-menu")
-		mobileMenuIcon.classList.add("iconoir-xmark")
-
-		// Show navigation
-		$("#" + navigation.id).css("display", "flex").hide().fadeIn()
-	} else {
-		// Menu Button
-		let dataAlt = menuButton.textContent
-		menuButton.textContent = menuButton.getAttribute("data-alt")
-		menuButton.setAttribute("data-alt", dataAlt)
-
-		// Mobile Menu Button
-		mobileMenuIcon.classList.remove("iconoir-xmark")
-		mobileMenuIcon.classList.add("iconoir-menu")
-		
-		$("#" + navigation.id).fadeOut()
-	}
-}
-
 function scrollToTop() {
-	toggleNavigation()
 	window.scrollTo({top: 0, left: 0, behavior: "smooth"})
-}
-
-function noSpam(e) {
-	e.onclick = ""
-	e.href = "mailto:" + window.atob(noSpamValue)
 }

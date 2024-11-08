@@ -4,58 +4,73 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Alex Zava, Freelance Full Stack Developer">
-	<meta name="keywords" content="alexzava, Alex Zava, alexzava.com, freelance, developer, portfolio, full stack developer, web developer, italia covid-19, krypto, kitty chat, azure cloud architect, java developer, dynamics 365/AX">
-	<title>ALEX ZAVA — Full Stack Developer</title>
+	<meta name="keywords" content="alexzava, Alex Zava, alexzava.com, freelance, developer, portfolio, full stack developer, web developer, italia covid-19, krypto, kitty chat, azure cloud architect, java developer, dynamics 365/AX, golang developer">
+	<title>ALEX ZAVA - Full Stack Developer</title>
 
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/fonts.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/media-query.css">
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-	<script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 	<script src="js/app.js"></script>
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbarOffcanvas">
 	<div class="navbar">
 		<a class="nav-logo" href="#" onclick="scrollToTop()">AZ</a>
 		<div class="nav-menu-group">
 			<a href="#contact" class="navbar-contact">
 				<i class="iconoir-mail"></i>
 			</a>
-
-			<button class="menu-btn button" id="menu-btn" data-alt="Close">
-				Menu
-			</button>
 		
-			<button class="mobile-menu-btn" id="mobile-menu-btn">
+			<button class="mobile-menu-btn" id="mobile-menu-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
 				<i class="iconoir-menu" id="mobile-menu-icon"></i>
 			</button>
 		</div>
-		<nav class="navigation" id="navigation">
-			<a href="#" onclick="scrollToTop()" class="nav-link animate__animated animate__fadeIn animate__faster">
-				Home
-			</a>
-			<a href="#about" onclick="toggleNavigation()" class="nav-link animate__animated animate__fadeIn animate__faster">
-				About
-			</a>
-			<a href="#projects" onclick="toggleNavigation()" class="nav-link animate__animated animate__fadeIn animate__faster">
-				Projects
-			</a>
-			<a href="#contact" onclick="toggleNavigation()" class="nav-link animate__animated animate__fadeIn animate__faster">
-				Contact
-			</a>
-		</nav>
+		<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h3 class="offcanvas-title navbar-title" id="offcanvasNavbarLabel">
+                    	Alex <span class="first-letter">Z</span>ava
+                    </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div id="navbarOffcanvas" class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#work-experiences">Work Experiences</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 	</div>
 
-	<main class="main-section" id="home">
+	<!-- Landing Section -->
+	<section class="main-section" id="home">
 		<div class="filler-container">
 			<div class="animate__animated animate__fadeIn animate__delay-2s">
 				<svg class="title-filler-1" style="--rotate: rotate(-15deg)" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_116_153)"> <path d="M100 0C103.395 53.7596 146.24 96.6052 200 100C146.24 103.395 103.395 146.24 100 200C96.6052 146.24 53.7596 103.395 0 100C53.7596 96.6052 96.6052 53.7596 100 0Z" fill="#e478ff"/> </g> </svg>
 			</div>
 			<div class="animate__animated animate__fadeIn" id="title-flower-svg">
-				<svg class="title-bg-filler" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_104_215)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M100 100C100 100 112.5 66.5265 112.5 42.8571C112.5 19.1878 106.904 0 100 0C93.0964 0 87.5 19.1878 87.5 42.8571C87.5 66.5265 100 100 100 100ZM100 100C100 100 114.831 132.508 131.567 149.245C148.304 165.982 165.829 175.592 170.711 170.711C175.592 165.829 165.982 148.304 149.245 131.567C132.508 114.831 100 100 100 100ZM100 100C100 100 133.474 87.5 157.143 87.5C180.812 87.5 200 93.0964 200 100C200 106.904 180.812 112.5 157.143 112.5C133.474 112.5 100 100 100 100ZM100 100C100 100 67.4918 114.831 50.755 131.567C34.0183 148.304 24.4077 165.829 29.2893 170.711C34.1709 175.592 51.696 165.982 68.4327 149.245C85.1695 132.508 100 100 100 100ZM100 100L100 100C100.028 100.074 112.5 133.5 112.5 157.143C112.5 180.812 106.904 200 100 200C93.0964 200 87.5 180.812 87.5 157.143C87.5 133.474 100 100 100 100ZM100 100C100 100 66.5265 87.5 42.8571 87.5C19.1878 87.5 0 93.0964 0 100C0 106.904 19.1878 112.5 42.8571 112.5C66.5265 112.5 100 100 100 100ZM100 99.9999C100 99.9999 132.508 85.1694 149.245 68.4327C165.982 51.6959 175.592 34.1708 170.711 29.2893C165.829 24.4077 148.304 34.0183 131.567 50.755C114.831 67.4918 100 99.9999 100 99.9999ZM68.4327 50.755C85.1695 67.4918 100 100 100 100C100 100 67.4918 85.1695 50.7551 68.4327C34.0183 51.696 24.4078 34.1709 29.2893 29.2893C34.1709 24.4078 51.696 34.0183 68.4327 50.755Z" fill="#00bf17"/> </g>  </svg>
+				<svg class="title-bg-filler" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_104_215)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M100 100C100 100 112.5 66.5265 112.5 42.8571C112.5 19.1878 106.904 0 100 0C93.0964 0 87.5 19.1878 87.5 42.8571C87.5 66.5265 100 100 100 100ZM100 100C100 100 114.831 132.508 131.567 149.245C148.304 165.982 165.829 175.592 170.711 170.711C175.592 165.829 165.982 148.304 149.245 131.567C132.508 114.831 100 100 100 100ZM100 100C100 100 133.474 87.5 157.143 87.5C180.812 87.5 200 93.0964 200 100C200 106.904 180.812 112.5 157.143 112.5C133.474 112.5 100 100 100 100ZM100 100C100 100 67.4918 114.831 50.755 131.567C34.0183 148.304 24.4077 165.829 29.2893 170.711C34.1709 175.592 51.696 165.982 68.4327 149.245C85.1695 132.508 100 100 100 100ZM100 100L100 100C100.028 100.074 112.5 133.5 112.5 157.143C112.5 180.812 106.904 200 100 200C93.0964 200 87.5 180.812 87.5 157.143C87.5 133.474 100 100 100 100ZM100 100C100 100 66.5265 87.5 42.8571 87.5C19.1878 87.5 0 93.0964 0 100C0 106.904 19.1878 112.5 42.8571 112.5C66.5265 112.5 100 100 100 100ZM100 99.9999C100 99.9999 132.508 85.1694 149.245 68.4327C165.982 51.6959 175.592 34.1708 170.711 29.2893C165.829 24.4077 148.304 34.0183 131.567 50.755C114.831 67.4918 100 99.9999 100 99.9999ZM68.4327 50.755C85.1695 67.4918 100 100 100 100C100 100 67.4918 85.1695 50.7551 68.4327C34.0183 51.696 24.4078 34.1709 29.2893 29.2893C34.1709 24.4078 51.696 34.0183 68.4327 50.755Z" fill="#58bf43"/> </g>  </svg>
 			</div>
 			<h1 class="main-title animate__animated animate__fadeIn animate__delay-1s">
 				Alex 
@@ -96,15 +111,25 @@
 			<a class="scrolling-text" href="#contact">
 				Freelance Available!
 			</a>
+			<a class="scrolling-text" href="#contact">
+				Freelance Available!
+			</a>
+			<a class="scrolling-text" href="#contact">
+				Freelance Available!
+			</a>
+			<a class="scrolling-text" href="#contact">
+				Freelance Available!
+			</a>
 		</div>
 
 		<a class="scroll-button animate__animated animate__fadeIn animate__delay-3s" href="#about">
 			<i class="icon iconoir-arrow-down-circle"></i>
 		</a>
-	</main>
+	</section>
 
-	<div class="about-section" id="about">
-		<div class="container">
+	<!-- About Section -->
+	<main class="about-section" id="about">
+		<div class="container-fluid">
 			<div class="flex-container-about">
 				<article class="description">
 					<h2 class="title">Hello!</h2>
@@ -112,8 +137,13 @@
 						I’m <span class="highlight-text">Alessandro</span> a <span class="highlight-text">Full Stack Developer</span> working remotely from <span class="highlight-text">Italy</span>.
 					</p>
 					<p class="text">
-						Over the past <span class="highlight-text">6+ years</span> I have had the opportunity to enjoy <span class="highlight-text">varied experiences</span> in <span class="highlight-text">different areas in the IT industry</span>. 
-						This has allowed me to acquire a multitude of knowledge, from <span class="highlight-text">web and software development</span> to <span class="highlight-text">cloud server management</span>. 
+						I have always been passionate about the IT world, and with <span class="highlight-text">over 6+ years of work experience</span>, 
+						I have gained extensive knowledge in various areas of the industry, 
+						including <span class="highlight-text">web development</span>, 
+						<span class="highlight-text">software development</span>, 
+						<span class="highlight-text">database management</span>, 
+						<span class="highlight-text">Android development</span>, 
+						<span class="highlight-text">cloud server management</span>, and more.
 					</p>
 					<a class="contact-me button" href="#contact">
 						<i class="iconoir-mail"></i>
@@ -124,136 +154,180 @@
 					<img src="images/me.png" alt="image of myself">
 				</div>
 			</div>
-			<section class="flex-container-experiences">
-				<h2 class="title-2">— Experiences —</h2>
-				<div class="flex-experiences">
-					<article class="experience-box" style="--bg-color: #686efd;">
-						<svg class="experience-bg-image-1" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M200 150H143.75C143.75 125.838 124.162 106.25 100 106.25C75.8375 106.25 56.25 125.838 56.25 150H0C0 94.7715 44.7715 50 100 50C155.228 50 200 94.7715 200 150Z" fill="#FFB900"/></svg>
-						<h3 class="experience-title">Web Developer</h3>
-						<p class="experience-description">
-							I worked as a web developer for a well-known Italian digital marketing company.
-						</p>
-					</article>
-
-					<article class="experience-box" style="--bg-color: #FFB900;">
-						<svg class="experience-bg-image-2" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M200 150H143.75C143.75 125.838 124.162 106.25 100 106.25C75.8375 106.25 56.25 125.838 56.25 150H0C0 94.7715 44.7715 50 100 50C155.228 50 200 94.7715 200 150Z" fill="#009310"/></svg>
-						<h3 class="experience-title">Azure Cloud Architect</h3>
-						<p class="experience-description">
-							I had the opportunity to work as a cloud architect in a Microsoft Azure and Microsoft LCS environment for a major French multinational company in its Italian offices.
-						</p>
-					</article>
-
-					<article class="experience-box" style="--bg-color: #009310;">
-						<svg class="experience-bg-image-3" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M200 150H143.75C143.75 125.838 124.162 106.25 100 106.25C75.8375 106.25 56.25 125.838 56.25 150H0C0 94.7715 44.7715 50 100 50C155.228 50 200 94.7715 200 150Z" fill="#E478FF"/></svg>
-						<h3 class="experience-title">Dynamics 365/AX</h3>
-						<p class="experience-description">
-							I had the opportunity to work as a Miscrosoft Dynamics 365 and AX developer for a major French multinational company in its Italian offices.
-						</p>
-					</article>
-
-					<article class="experience-box" style="--bg-color: #E478FF;">
-						<svg class="experience-bg-image-4" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M200 150H143.75C143.75 125.838 124.162 106.25 100 106.25C75.8375 106.25 56.25 125.838 56.25 150H0C0 94.7715 44.7715 50 100 50C155.228 50 200 94.7715 200 150Z" fill="#b9f301"/></svg>
-						<h3 class="experience-title">Java Developer</h3>
-						<p class="experience-description">
-							I worked as Java software developer for an international company in the nautical sector
-						</p>
-					</article>
-
-					<article class="experience-box" style="--bg-color: #b9f301;">
-						<svg class="experience-bg-image-1" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M200 150H143.75C143.75 125.838 124.162 106.25 100 106.25C75.8375 106.25 56.25 125.838 56.25 150H0C0 94.7715 44.7715 50 100 50C155.228 50 200 94.7715 200 150Z" fill="#6266ec"/></svg>
-						<h3 class="experience-title">Freelance</h3>
-						<p class="experience-description">
-							Meanwhile, I continued to work as a freelance developer for individual clients.
-						</p>
-					</article>
-				</div>
-			</section>
 		</div>
-	</div>
+	</main>
 
-	<div class="experience-section" id="projects">
-		<div class="horizontal-container-sticky">
-			<div class="horizontal-container">
-				<div class="title-box">
-					<h2 class="title">
-						Projects
-					</h2>
-					<p class="description">
-						Here some of my projects available on GitHub
-					</p>
-					<i class="iconoir-arrow-right"></i>
-
-					<svg class="projects-bgel-1" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M200 150H143.75C143.75 125.838 124.162 106.25 100 106.25C75.8375 106.25 56.25 125.838 56.25 150H0C0 94.7715 44.7715 50 100 50C155.228 50 200 94.7715 200 150Z" fill="#009310"/></svg>
-					<svg class="projects-bgel-star-bottom" style="--rotate: rotate(15deg)" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <g> <path d="M100 0C103.395 53.7596 146.24 96.6052 200 100C146.24 103.395 103.395 146.24 100 200C96.6052 146.24 53.7596 103.395 0 100C53.7596 96.6052 96.6052 53.7596 100 0Z" fill="#009310"/> </g> </svg>
+	<!-- Work Experiences Section -->
+	<div class="experiences-section" id="work-experiences">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-6">
+					<h2 class="title">Work Experiences</h2>
 				</div>
-				
-				<article class="box box-outline box-wave">
-					<h3 class="title">Krypto</h3>
-					<p class="description">
-						Krypto is a simple tool to protect your private documents with encryption.
-					</p>
-					<p class="description">
-						It's designed to be simple and secure by using AES cipher with a key of 256bit and Argon2ID as key derivation function.
-					</p>
-					<a href="https://github.com/alexzava/krypto" target="_blank" class="project-btn button">
-						<i class="iconoir-github-circle"></i>
-						Open on GitHub
-					</a>
+				<div class="col-sm-12 col-md-12 col-lg-4">
+					<div id="experiences-carousel" class="carousel slide">
+						<div class="carousel-inner">
+							<div class="box carousel-item active">
+								<div class="d-flex flex-column justify-content-between h-100">
+									<p>
+										<b>Remote web developer</b> for a well-known Italian digital marketing company.
+										I specialized in the design and development of custom websites for real estate agencies.
+									</p>
+									<h3 class="box-title">Web Developer</h3>
+								</div>
+							</div>
+							<div class="box box-alt carousel-item carousel-next-item">
+								<div class="d-flex flex-column justify-content-between h-100">
+									<p>
+										<b>Cloud architect</b> for a major French multinational company in its Italian offices. 
+										I was responsible for designing, implementing, and maintaining cloud services and infrastructure within the Microsoft Azure ecosystem and Microsoft LCS (Lifecycle Services).
+									</p>
+									<h3 class="box-title">Azure Cloud Architect</h3>
+								</div>
+							</div>
+							<div class="box carousel-item">
+								<div class="d-flex flex-column justify-content-between h-100">
+									<p>
+										<b>Miscrosoft Dynamics 365</b> and <b>AX developer</b> for a major French multinational company in its Italian offices.
+										I was responsible for the development, and maintenance of Microsoft Dynamics 365 Finance & Operations (F&O) systems.
+									</p>
+									<h3 class="box-title">Dynamics 365/AX</h3>
+								</div>
+							</div>
+							<div class="box box-alt carousel-item">
+								<div class="d-flex flex-column justify-content-between h-100">
+									<p>
+										<b>Java software developer</b> for an international company in the nautical sector.
+										I was responsible for developing a Java-based application to manage and modify data within the proprietary Warehouse Management Software database.
+									</p>
+									<h3 class="box-title">Java Developer</h3>
+								</div>
+							</div>
+						</div>
 
-					<svg class="projects-krypto-flower" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M100 100C100 100 112.5 66.5265 112.5 42.8571C112.5 19.1878 106.904 0 100 0C93.0964 0 87.5 19.1878 87.5 42.8571C87.5 66.5265 100 100 100 100ZM100 100C100 100 114.831 132.508 131.567 149.245C148.304 165.982 165.829 175.592 170.711 170.711C175.592 165.829 165.982 148.304 149.245 131.567C132.508 114.831 100 100 100 100ZM100 100C100 100 133.474 87.5 157.143 87.5C180.812 87.5 200 93.0964 200 100C200 106.904 180.812 112.5 157.143 112.5C133.474 112.5 100 100 100 100ZM100 100C100 100 67.4918 114.831 50.755 131.567C34.0183 148.304 24.4077 165.829 29.2893 170.711C34.1709 175.592 51.696 165.982 68.4327 149.245C85.1695 132.508 100 100 100 100ZM100 100L100 100C100.028 100.074 112.5 133.5 112.5 157.143C112.5 180.812 106.904 200 100 200C93.0964 200 87.5 180.812 87.5 157.143C87.5 133.474 100 100 100 100ZM100 100C100 100 66.5265 87.5 42.8571 87.5C19.1878 87.5 0 93.0964 0 100C0 106.904 19.1878 112.5 42.8571 112.5C66.5265 112.5 100 100 100 100ZM100 99.9999C100 99.9999 132.508 85.1694 149.245 68.4327C165.982 51.6959 175.592 34.1708 170.711 29.2893C165.829 24.4077 148.304 34.0183 131.567 50.755C114.831 67.4918 100 99.9999 100 99.9999ZM68.4327 50.755C85.1695 67.4918 100 100 100 100C100 100 67.4918 85.1695 50.7551 68.4327C34.0183 51.696 24.4078 34.1709 29.2893 29.2893C34.1709 24.4078 51.696 34.0183 68.4327 50.755Z" fill="#FFB900"/> </svg>
-					<svg class="projects-bgel-2" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M200 150H143.75C143.75 125.838 124.162 106.25 100 106.25C75.8375 106.25 56.25 125.838 56.25 150H0C0 94.7715 44.7715 50 100 50C155.228 50 200 94.7715 200 150Z" fill="#FFB900"/></svg>
-				</article>
-
-				<article class="box box-magenta">
-					<h3 class="title">Kitty Chat</h3>
-					<p class="description">
-						KittyChat is a secure End-to-End encrypted chat application for Android and Web.
-					</p>
-					<p class="description">
-						It protect your chats with strong encryption using XSalsa20 stream cipher and ECC Curve25519. The server is designed not to keep track of any private data that could compromise users' identities.
-					</p>
-					<a href="javascript:void(0)" class="project-btn button">
-						<i class="iconoir-multiple-pages"></i>
-						Read the white paper
-					</a>
-
-					<svg class="projects-kitty-star" style="--rotate: rotate(15deg)" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <g> <path d="M100 0C103.395 53.7596 146.24 96.6052 200 100C146.24 103.395 103.395 146.24 100 200C96.6052 146.24 53.7596 103.395 0 100C53.7596 96.6052 96.6052 53.7596 100 0Z" fill="#FFF1E2"/> </g></svg>
-					<svg class="projects-bgel-3" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M200 150H143.75C143.75 125.838 124.162 106.25 100 106.25C75.8375 106.25 56.25 125.838 56.25 150H0C0 94.7715 44.7715 50 100 50C155.228 50 200 94.7715 200 150Z" fill="#FFF1E2"/></svg>
-				</article>
-
-				<article class="box box-outline box-wave-horizontal">
-					<h3 class="title">Italia Covid-19</h3>
-					<p class="description">
-						Italia Covid-19 is a website to track and graphically show data and trends of covid19 in italy.
-					</p>
-					<p class="description">
-						The data are provided by the public repository of the Italian Civil Defense (Protezione Civile).
-					</p>
-					<a href="https://italiacovid19.alexzava.com" target="_blank" class="project-btn button">
-						<i class="iconoir-link"></i>
-						Italia COVID-19
-					</a>
-
-					<svg class="projects-itcov19-round" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M200 150H143.75C143.75 125.838 124.162 106.25 100 106.25C75.8375 106.25 56.25 125.838 56.25 150H0C0 94.7715 44.7715 50 100 50C155.228 50 200 94.7715 200 150Z" fill="#FFB900"/></svg>
-					<svg class="projects-itcov19-star" style="--rotate: rotate(15deg)" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <g> <path d="M100 0C103.395 53.7596 146.24 96.6052 200 100C146.24 103.395 103.395 146.24 100 200C96.6052 146.24 53.7596 103.395 0 100C53.7596 96.6052 96.6052 53.7596 100 0Z" fill="#FFB900"/> </g> </svg>
-				</article>
+						<div class="box-controller">
+							<button type="button" data-bs-target="#experiences-carousel" data-bs-slide="prev">
+								<i class="iconoir-arrow-left-circle"></i>
+							</button type="button"> 
+							<span id="carousel-counter" class="counter-label d-flex align-items-center">1/4</span>
+							<button type="button" data-bs-target="#experiences-carousel" data-bs-slide="next">
+								<i class="iconoir-arrow-right-circle"></i>
+							</button type="button"> 
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 
+	<!-- Projects Section -->
+	<div class="projects-section" id="projects">
+		<div class="container text-center">
+			<h2 class="title mb-4">
+				<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 409.6 409.6" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs"><path d="M409.602 341.336c0 37.7-30.567 68.266-68.266 68.266-37.703 0-68.266-30.567-68.266-68.266 0-37.703 30.563-68.266 68.266-68.266 37.7 0 68.266 30.563 68.266 68.266zM324.27 179.2c0 32.991-26.743 59.734-59.735 59.734-32.992 0-59.734-26.743-59.734-59.735 0-32.988 26.742-59.734 59.734-59.734 32.992 0 59.735 26.746 59.735 59.734zm-119.47 128c0 56.554-45.847 102.402-102.402 102.402C45.848 409.602 0 363.754 0 307.199c0-56.554 45.848-102.398 102.398-102.398 56.555 0 102.403 45.844 102.403 102.398zM170.672 85.336c0 47.129-38.207 85.336-85.336 85.336S0 132.465 0 85.336 38.207 0 85.336 0s85.336 38.207 85.336 85.336zM409.602 51.2c0 28.277-22.926 51.198-51.204 51.198-28.277 0-51.199-22.921-51.199-51.199C307.2 22.922 330.121 0 358.4 0c28.277 0 51.203 22.922 51.203 51.2zm-17.071 170.663c0 9.426-7.64 17.067-17.066 17.067-9.426 0-17.067-7.64-17.067-17.067 0-9.422 7.641-17.062 17.067-17.062s17.066 7.64 17.066 17.062zM264.535 59.734c0 14.141-11.46 25.602-25.601 25.602-14.137 0-25.598-11.461-25.598-25.602 0-14.136 11.46-25.597 25.598-25.597 14.14 0 25.601 11.46 25.601 25.597zm0 0" fill="rgba(195, 243, 185, 1)"></path></svg>
+				Some of my projects
+			</h2>
+			<p class="text">These are some of my open source projects available on GitHub.</p>
+			<div class="project-container mt-8r">
+				<img src="images/krypto-screen.png">
+				<div class="content col-sm-12 col-md-12 col-lg-5">
+					<h3 class="title">Krypto for Android</h3>
+					<p class="text">
+						<b>Krypto</b> for Android is a simple and secure app to protect your private documents with <b>strong encryption</b>.
+					</p>
+					<p class="text">
+						It's designed to be simple but secure by using <b>XChaCha20-Poly1305</b> for symmetric encryption, 
+						<b>Argon2id</b> for key derivation function, 
+						<b>X25519</b> (Curve 25519) for secure key exchange.
+					</p>
+					<p class="text">Windows and Linux versions are coming soon.</p>
+					<a class="button project-button mt-4" href="https://github.com/alexzava/krypto-android" target="_blank">
+						<i class="iconoir-github-circle"></i>
+						Open on GitHub
+					</a>
+				</div>
+			</div>
+			
+			<div class="project-container container-alt">
+				<img src="images/italiacovid19-screen.png">
+				<div class="content col-sm-12 col-md-12 col-lg-5">
+					<h3 class="title">Italia Covid-19</h3>
+					<p class="text">
+						<b>Italia Covid-19</b> is a website that tracks and visually presents data and trends related to Covid-19 in Italy.
+					</p>
+					<p class="text">
+						The data is sourced from the public repository of the Italian Civil Protection (Protezione Civile).
+					</p>
+					<a class="button project-button mt-4" href="https://italiacovid19.alexzava.com" target="_blank">
+						<i class="iconoir-internet"></i>
+						Go to Italia Covid 19
+					</a>
+				</div>
+			</div>
+
+			<div class="project-container container">
+				<img src="images/kittychat-screen.png">
+				<div class="content col-sm-12 col-md-12 col-lg-5">
+					<h3 class="title">Kitty Chat</h3>
+					<p class="text">
+						<b>KittyChat</b> is a secure <b>end-to-end encrypted</b> messaging application for Android and Web.
+					</p>
+					<p class="text">
+						It protects your conversations with strong encryption, using the <b>XSalsa20</b> stream cipher and ECC <b>Curve25519</b>. 
+						The server is designed to ensure that no private data is stored, safeguarding users' identities.
+					</p>
+					<!--<a class="button project-button mt-4" href="#">
+						<i class="iconoir-multiple-pages"></i>
+						Read the white paper
+					</a>-->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Contact Section -->
 	<section class="contact-section" id="contact">
-		<h2 class="title">Contact</h2>
-		<p class="description">Freelance available!</p>
-		<div class="contact-list">
-			<a href="#" onclick="noSpam(this)" class="button">
-				<i class="iconoir-mail"></i>
-				Email
-			</a>
-			<a href="https://github.com/alexzava" target="_blank" class="button">
-				<i class="iconoir-github-circle"></i>
-				GitHub
-			</a>
+		<div class="container text-center">
+			<h2 class="title">
+				Contact me
+				<img src="images/title-bg-yellow.svg">
+			</h2>
+			<p class="description">
+				I am currently open to proposals for full-time or project-based <b>remote work</b>.
+				<br>
+				<b>Get in touch!</b>
+			</p>
+
+			<div class="contact-buttons">
+				<a class="button contact-button" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#contact-modal">
+					<i class="iconoir-mail"></i>
+					Email
+				</a>
+
+				<a class="button contact-button" href="https://github.com/alexzava" target="_blank">
+					<i class="iconoir-github-circle"></i>
+					GitHub
+				</a>
+			</div>
 		</div>
 	</section>
+
+	<div class="modal fade" id="contact-modal" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-center" id="contact-modal-body"></div>
+				<div class="modal-footer">
+					<a id="copy-email-button" class="button" href="javascript:void(0)">
+						<i class="iconoir-copy"></i>
+						Copy
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>
