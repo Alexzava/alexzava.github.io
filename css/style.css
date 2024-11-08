@@ -529,7 +529,7 @@ body {
 
 .carousel-next-item {
 	visibility: visible !important;
-	left: 120px;
+	left: 60px;
 	transform: scale(.8);
 	z-index: -1;
 }
