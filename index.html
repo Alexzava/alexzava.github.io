@@ -2,324 +2,375 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="description" content="I'm Alessandro, a freelance web and software developer with more than 6 years of experience based in Italy. I am currently open to proposals for freelance remote work.">
+	<meta name="keywords" content="Freelance Developer, Software Developer, Web Developer, Remote Developer, Backend Developer">
+	<meta name="author" content="Alex Zava">
+	<meta name="robots" content="noai, noimageai">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Alex Zava, Freelance Full Stack Developer">
-	<meta name="keywords" content="alexzava, Alex Zava, alexzava.com, freelance, developer, portfolio, full stack developer, web developer, italia covid-19, krypto, kitty chat, azure cloud architect, java developer, dynamics 365/AX, golang developer">
-	<title>ALEX ZAVA - Full Stack Developer</title>
+	<title>Alex Zava – Freelance Web and Software Developer</title>
 
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta property="og:title" content="Alex Zava - Portfolio. Freelance web and software developer">
+    <meta property="og:description" content="I'm Alessandro, a freelance web and software developer with more than 6 years of experience based in Italy. I am currently open to proposals for freelance remote work.">
+    <meta property="og:image" content="images/picture.png">
+    <meta property="og:url" content="https://alexzava.com">
+    <meta property="og:type" content="website">
 
-	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/fonts.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/media-query.css">
+    <link rel="canonical" href="https://alexzava.com">
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/iconoir.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/gsap.min.js"></script>
+	<script src="js/scrolltrigger.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+	<script src="js/jquery-3.7.1.min.js"></script>
 	<script src="js/app.js"></script>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbarOffcanvas">
-	<div class="navbar">
-		<a class="nav-logo" href="#" onclick="scrollToTop()">AZ</a>
-		<div class="nav-menu-group">
-			<a href="#contact" class="navbar-contact">
-				<i class="iconoir-mail"></i>
-			</a>
-		
-			<button class="mobile-menu-btn" id="mobile-menu-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-				<i class="iconoir-menu" id="mobile-menu-icon"></i>
-			</button>
+<body data-bs-spy="scroll" data-bs-target="#nav">
+	<!-- Preloader -->
+	<div id="preloader" class="preloader d-flex justify-content-center align-items-center">
+		<div class="spinner-border" role="status">
+			<span class="visually-hidden">Loading...</span>
 		</div>
-		<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h3 class="offcanvas-title navbar-title" id="offcanvasNavbarLabel">
-                    	Alex <span class="first-letter">Z</span>ava
-                    </h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div id="navbarOffcanvas" class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#work-experiences">Work Experiences</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projects">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+	</div>
+	
+	<div class="navbar2">
+		<header class="navbar2-content box-shadow gap-3">
+			<div class="d-flex flex-row align-items-center justify-content-between">
+				<a href="#cover" class="navbar-title">
+					AZ
+				</a>
+				<a href="#" class="toggle-nav" data-bs-toggle="collapse" data-bs-target="#navCollapse">
+					<i class="iconoir-menu"></i>
+				</a>
+			</div>
+			<nav class="nav collapse gap-3" id="navCollapse">
+				<a class="navbar2-link" href="#about">About</a>
+				<a class="navbar2-link" href="#experience">Experience</a>
+				<a class="navbar2-link" href="#projects">Projects</a>
+				<a class="navbar2-link" href="#contact">Contact</a>
+			</nav>
+		</header>
 	</div>
 
-	<!-- Landing Section -->
-	<section class="main-section" id="home">
-		<div class="filler-container">
-			<div class="animate__animated animate__fadeIn animate__delay-2s">
-				<svg class="title-filler-1" style="--rotate: rotate(-15deg)" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_116_153)"> <path d="M100 0C103.395 53.7596 146.24 96.6052 200 100C146.24 103.395 103.395 146.24 100 200C96.6052 146.24 53.7596 103.395 0 100C53.7596 96.6052 96.6052 53.7596 100 0Z" fill="#e478ff"/> </g> </svg>
-			</div>
-			<div class="animate__animated animate__fadeIn" id="title-flower-svg">
-				<svg class="title-bg-filler" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_104_215)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M100 100C100 100 112.5 66.5265 112.5 42.8571C112.5 19.1878 106.904 0 100 0C93.0964 0 87.5 19.1878 87.5 42.8571C87.5 66.5265 100 100 100 100ZM100 100C100 100 114.831 132.508 131.567 149.245C148.304 165.982 165.829 175.592 170.711 170.711C175.592 165.829 165.982 148.304 149.245 131.567C132.508 114.831 100 100 100 100ZM100 100C100 100 133.474 87.5 157.143 87.5C180.812 87.5 200 93.0964 200 100C200 106.904 180.812 112.5 157.143 112.5C133.474 112.5 100 100 100 100ZM100 100C100 100 67.4918 114.831 50.755 131.567C34.0183 148.304 24.4077 165.829 29.2893 170.711C34.1709 175.592 51.696 165.982 68.4327 149.245C85.1695 132.508 100 100 100 100ZM100 100L100 100C100.028 100.074 112.5 133.5 112.5 157.143C112.5 180.812 106.904 200 100 200C93.0964 200 87.5 180.812 87.5 157.143C87.5 133.474 100 100 100 100ZM100 100C100 100 66.5265 87.5 42.8571 87.5C19.1878 87.5 0 93.0964 0 100C0 106.904 19.1878 112.5 42.8571 112.5C66.5265 112.5 100 100 100 100ZM100 99.9999C100 99.9999 132.508 85.1694 149.245 68.4327C165.982 51.6959 175.592 34.1708 170.711 29.2893C165.829 24.4077 148.304 34.0183 131.567 50.755C114.831 67.4918 100 99.9999 100 99.9999ZM68.4327 50.755C85.1695 67.4918 100 100 100 100C100 100 67.4918 85.1695 50.7551 68.4327C34.0183 51.696 24.4078 34.1709 29.2893 29.2893C34.1709 24.4078 51.696 34.0183 68.4327 50.755Z" fill="#58bf43"/> </g>  </svg>
-			</div>
-			<h1 class="main-title animate__animated animate__fadeIn animate__delay-1s">
-				Alex 
-				<br>
-				<span class="first-letter">Z</span>ava
-			</h1>
-			<div class="animate__animated animate__fadeIn animate__delay-2s">
-				<svg class="title-filler-2" style="--rotate: rotate(15deg)" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_116_153)"> <path d="M100 0C103.395 53.7596 146.24 96.6052 200 100C146.24 103.395 103.395 146.24 100 200C96.6052 146.24 53.7596 103.395 0 100C53.7596 96.6052 96.6052 53.7596 100 0Z" fill="#ffb900"/> </g></svg>
-			</div>
-		</div>
-		<p class="main-description animate__animated animate__fadeInUp animate__delay-2s">
+	<div id="cover" class="cover alt-section-color min-vh-100 d-flex flex-column justify-content-center align-items-center">
+		<h2 class="cover-title d-flex flex-column flex-lg-row justify-content-center align-items-center gap-2">
+			<span class="cover-title-line-top"></span>
+			<span id="cover-title-1">
+				Alex
+			</span>
+			<span id="cover-title-2">
+				Zava
+			</span>
+			<span class="cover-title-line-bottom"></span>
+		</h2>
+		<h6 class="position-relative"
+			data-aos="fade-in"
+			data-aos-delay="2000">
 			<span id="info-animated-box">
 				<span id="info-animated-text">
-					Full Stack Developer 
+					Freelance Developer
 				</span>
 			</span>
-		</p>
-
-		<div class="scrolling-banner animate__animated animate__fadeIn animate__delay-3s">
-			<a class="scrolling-text" href="#contact">
-				Freelance Available!
-			</a>
-			<a class="scrolling-text" href="#contact">
-				Freelance Available!
-			</a>
-			<a class="scrolling-text" href="#contact">
-				Freelance Available!
-			</a>
-			<a class="scrolling-text" href="#contact">
-				Freelance Available!
-			</a>
-			<a class="scrolling-text" href="#contact">
-				Freelance Available!
-			</a>
-			<a class="scrolling-text" href="#contact">
-				Freelance Available!
-			</a>
-			<a class="scrolling-text" href="#contact">
-				Freelance Available!
-			</a>
-			<a class="scrolling-text" href="#contact">
-				Freelance Available!
-			</a>
-			<a class="scrolling-text" href="#contact">
-				Freelance Available!
-			</a>
-			<a class="scrolling-text" href="#contact">
-				Freelance Available!
-			</a>
-		</div>
-
-		<a class="scroll-button animate__animated animate__fadeIn animate__delay-3s" href="#about">
-			<i class="icon iconoir-arrow-down-circle"></i>
+		</h6>
+		<a id="cover-scrolling-button" class="scroll-button d-flex justify-content-center align-items-center" href="#about">
+			<i class="iconoir-nav-arrow-down"></i>
 		</a>
-	</section>
-
-	<!-- About Section -->
-	<main class="about-section" id="about">
-		<div class="container-fluid">
-			<div class="flex-container-about">
-				<article class="description">
-					<h2 class="title">Hello!</h2>
-					<p class="text">
-						I’m <span class="highlight-text">Alessandro</span> a <span class="highlight-text">Full Stack Developer</span> working remotely from <span class="highlight-text">Italy</span>.
-					</p>
-					<p class="text">
-						I have always been passionate about the IT world, and with <span class="highlight-text">over 6+ years of work experience</span>, 
-						I have gained extensive knowledge in various areas of the industry, 
-						including <span class="highlight-text">web development</span>, 
-						<span class="highlight-text">software development</span>, 
-						<span class="highlight-text">database management</span>, 
-						<span class="highlight-text">Android development</span>, 
-						<span class="highlight-text">cloud server management</span>, and more.
-					</p>
-					<a class="contact-me button" href="#contact">
-						<i class="iconoir-mail"></i>
-						Get in touch
-					</a>
-				</article>
-				<div class="image">
-					<img src="images/me.png" alt="image of myself">
-				</div>
-			</div>
-		</div>
-	</main>
-
-	<!-- Work Experiences Section -->
-	<div class="experiences-section" id="work-experiences">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 col-md-12 col-lg-6">
-					<h2 class="title">Work Experiences</h2>
-				</div>
-				<div class="col-sm-12 col-md-12 col-lg-4">
-					<div id="experiences-carousel" class="carousel slide">
-						<div class="carousel-inner">
-							<div class="box carousel-item active">
-								<div class="d-flex flex-column justify-content-between h-100">
-									<p>
-										<b>Remote web developer</b> for a well-known Italian digital marketing company.
-										I specialized in the design and development of custom websites for real estate agencies.
-									</p>
-									<h3 class="box-title">Web Developer</h3>
-								</div>
-							</div>
-							<div class="box box-alt carousel-item carousel-next-item">
-								<div class="d-flex flex-column justify-content-between h-100">
-									<p>
-										<b>Cloud architect</b> for a major French multinational company in its Italian offices. 
-										I was responsible for designing, implementing, and maintaining cloud services and infrastructure within the Microsoft Azure ecosystem and Microsoft LCS (Lifecycle Services).
-									</p>
-									<h3 class="box-title">Azure Cloud Architect</h3>
-								</div>
-							</div>
-							<div class="box carousel-item">
-								<div class="d-flex flex-column justify-content-between h-100">
-									<p>
-										<b>Miscrosoft Dynamics 365</b> and <b>AX developer</b> for a major French multinational company in its Italian offices.
-										I was responsible for the development, and maintenance of Microsoft Dynamics 365 Finance & Operations (F&O) systems.
-									</p>
-									<h3 class="box-title">Dynamics 365/AX</h3>
-								</div>
-							</div>
-							<div class="box box-alt carousel-item">
-								<div class="d-flex flex-column justify-content-between h-100">
-									<p>
-										<b>Java software developer</b> for an international company in the nautical sector.
-										I was responsible for developing a Java-based application to manage and modify data within the proprietary Warehouse Management Software database.
-									</p>
-									<h3 class="box-title">Java Developer</h3>
-								</div>
-							</div>
-						</div>
-
-						<div class="box-controller">
-							<button type="button" data-bs-target="#experiences-carousel" data-bs-slide="prev">
-								<i class="iconoir-arrow-left-circle"></i>
-							</button type="button"> 
-							<span id="carousel-counter" class="counter-label d-flex align-items-center">1/4</span>
-							<button type="button" data-bs-target="#experiences-carousel" data-bs-slide="next">
-								<i class="iconoir-arrow-right-circle"></i>
-							</button type="button"> 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
-
-	<!-- Projects Section -->
-	<div class="projects-section" id="projects">
-		<div class="container text-center">
-			<h2 class="title mb-4">
-				<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 409.6 409.6" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs"><path d="M409.602 341.336c0 37.7-30.567 68.266-68.266 68.266-37.703 0-68.266-30.567-68.266-68.266 0-37.703 30.563-68.266 68.266-68.266 37.7 0 68.266 30.563 68.266 68.266zM324.27 179.2c0 32.991-26.743 59.734-59.735 59.734-32.992 0-59.734-26.743-59.734-59.735 0-32.988 26.742-59.734 59.734-59.734 32.992 0 59.735 26.746 59.735 59.734zm-119.47 128c0 56.554-45.847 102.402-102.402 102.402C45.848 409.602 0 363.754 0 307.199c0-56.554 45.848-102.398 102.398-102.398 56.555 0 102.403 45.844 102.403 102.398zM170.672 85.336c0 47.129-38.207 85.336-85.336 85.336S0 132.465 0 85.336 38.207 0 85.336 0s85.336 38.207 85.336 85.336zM409.602 51.2c0 28.277-22.926 51.198-51.204 51.198-28.277 0-51.199-22.921-51.199-51.199C307.2 22.922 330.121 0 358.4 0c28.277 0 51.203 22.922 51.203 51.2zm-17.071 170.663c0 9.426-7.64 17.067-17.066 17.067-9.426 0-17.067-7.64-17.067-17.067 0-9.422 7.641-17.062 17.067-17.062s17.066 7.64 17.066 17.062zM264.535 59.734c0 14.141-11.46 25.602-25.601 25.602-14.137 0-25.598-11.461-25.598-25.602 0-14.136 11.46-25.597 25.598-25.597 14.14 0 25.601 11.46 25.601 25.597zm0 0" fill="rgba(195, 243, 185, 1)"></path></svg>
-				Some of my projects
-			</h2>
-			<p class="text">These are some of my open source projects available on GitHub.</p>
-			<div class="project-container mt-8r">
-				<img src="images/krypto-screen.png">
-				<div class="content col-sm-12 col-md-12 col-lg-5">
-					<h3 class="title">Krypto</h3>
-					<p class="text">
-						<b>Krypto</b> is a simple and secure app to protect your private documents with <b>strong encryption</b>.
-					</p>
-					<p class="text">
-						It's designed to be simple but secure by using <b>XChaCha20-Poly1305</b> for symmetric encryption, 
-						<b>Argon2id</b> for key derivation function, 
-						<b>X25519</b> (Curve 25519) for secure key exchange.
-					</p>
-					<a class="button project-button mt-4" href="https://github.com/alexzava/krypto" target="_blank">
-						<i class="iconoir-github-circle"></i>
-						Krypto
-					</a>
-					<a class="button project-button mt-4" href="https://github.com/alexzava/krypto-android" target="_blank">
-						<i class="iconoir-github-circle"></i>
-						Krypto for Android
-					</a>
-				</div>
-			</div>
-			
-			<div class="project-container container-alt">
-				<img src="images/italiacovid19-screen.png">
-				<div class="content col-sm-12 col-md-12 col-lg-5">
-					<h3 class="title">Italia Covid-19</h3>
-					<p class="text">
-						<b>Italia Covid-19</b> is a website that tracks and visually presents data and trends related to Covid-19 in Italy.
-					</p>
-					<p class="text">
-						The data is sourced from the public repository of the Italian Civil Protection (Protezione Civile).
-					</p>
-					<a class="button project-button mt-4" href="https://italiacovid19.alexzava.com" target="_blank">
-						<i class="iconoir-internet"></i>
-						Go to Italia Covid 19
-					</a>
-				</div>
-			</div>
-
-			<div class="project-container container">
-				<img src="images/kittychat-screen.png">
-				<div class="content col-sm-12 col-md-12 col-lg-5">
-					<h3 class="title">Kitty Chat</h3>
-					<p class="text">
-						<b>KittyChat</b> is a secure <b>end-to-end encrypted</b> messaging application for Android and Web.
-					</p>
-					<p class="text">
-						It protects your conversations with strong encryption, using the <b>XSalsa20</b> stream cipher and ECC <b>Curve25519</b>. 
-						The server is designed to ensure that no private data is stored, safeguarding users' identities.
-					</p>
-					<!--<a class="button project-button mt-4" href="#">
-						<i class="iconoir-multiple-pages"></i>
-						Read the white paper
-					</a>-->
-				</div>
-			</div>
+	
+	<!-- About Me -->
+	<div id="about" class="about-section min-vh-100 container d-flex flex-column flex-lg-row-reverse align-items-center">
+		<div class="col-12 col-md-12 col-lg-6 d-flex justify-content-center"
+			data-aos="fade-in"
+			data-aos-delay="50">
+			<img src="images/picture.png" class="profile-picture img-fluid" loading="lazy" alt="A picture of myself">
 		</div>
-	</div>
 
-	<!-- Contact Section -->
-	<section class="contact-section" id="contact">
-		<div class="container text-center">
-			<h2 class="title">
-				Contact me
-				<img src="images/title-bg-yellow.svg">
-			</h2>
-			<p class="description">
-				I am currently open to proposals for full-time or project-based <b>remote work</b>.
-				<br>
-				<b>Get in touch!</b>
+		<section class="col-12 col-md-12 col-lg-6">
+			<h1 
+				class="text-title "
+				data-aos="fade-up">
+				Hello, I'm <span class="highlight-text">Alessandro.</span>
+			</h1>
+			<p data-aos="fade-up"
+				data-aos-delay="50">
+				I'm a <b class="highlight-text">freelance web</b> and <b class="highlight-text">software developer</b> with more than 6 years of experience based in Italy.
 			</p>
 
-			<div class="contact-buttons">
-				<a class="button contact-button" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#contact-modal">
-					<i class="iconoir-mail"></i>
-					Email
-				</a>
+			<div class="mt-4 d-flex flex-row align-items-center"
+				data-aos="fade-up"
+				data-aos-delay="150">
+				<img src="images/shapes/star.svg" class="star-shape opacity-50" alt="List dot style">
+				<p class="mt-2 mb-2 text-secondary"><b>Digital Humanities</b> at the University of Pisa (attending)</p>
+			</div>
 
-				<a class="button contact-button" href="https://github.com/alexzava" target="_blank">
-					<i class="iconoir-github-circle"></i>
-					GitHub
+			<div class="d-flex flex-row align-items-center"
+				data-aos="fade-up"
+				data-aos-delay="200">
+				<img src="images/shapes/star.svg" class="star-shape opacity-50" alt="List dot style">
+				<p class="mt-2 mb-2 text-secondary"><b>Computer Science</b> Diploma</p>
+			</div>
+
+			<div class="d-flex flex-row align-items-center"
+				data-aos="fade-up"
+				data-aos-delay="250">
+				<img src="images/shapes/star.svg" class="star-shape opacity-50" alt="List dot style">
+				<p class="mt-2 mb-2 text-secondary"><b>DevOps and Cisco</b> Certifications</p>
+			</div>
+
+			<p class="mt-4 text-secondary"
+				data-aos="fade-up"
+				data-aos-delay="300">
+				Skills: Nuxt, Go, Java, Android Dev, Sass, API Backend, etc.
+			</p>
+
+			<div class="pt-3 d-flex flex-row flex-wrap gap-3 align-items-center" 
+				data-aos="fade-up"
+				data-aos-delay="350">
+				<a href="#contact" class="button button-alt">
+					<i class="iconoir-mail"></i>
+					Get in touch
 				</a>
+				<a href="#gallery" class="button">
+					<i class="iconoir-compass"></i>
+					Explore
+				</a>
+			</div>
+		</section>
+	</div>
+
+	<!-- Gallery -->
+	<div id="gallery" class="pt-5 pb-5"
+		data-aos="fade-in">
+		<div class="scroll-gallery">
+			<div class="wrapper">
+				<div class="wrapper-element">
+					<img class="box-shadow" src='images/itc19.png' alt="Picture of Italia-Covid 19 website">
+				</div>
+				<div class="wrapper-element">
+					<img class="box-shadow" src='images/krypto.png' alt="Picture of Krypto app">
+				</div>
+				<div class="wrapper-element">
+					<img class="box-shadow" src='images/vestiq.png' alt="Picture of Vestiq demo app">
+				</div>
+			</div>
+		</div>
+		<div class="scroll-gallery">
+			<div class="wrapper">
+				<div class="wrapper-element">
+					<img class="box-shadow" src='images/krypto.png' alt="Picture of Krypto app">
+				</div>
+				<div class="wrapper-element">
+					<img class="box-shadow" src='images/vestiq.png' alt="Picture of Vestiq demo app">
+				</div>
+				<div class="wrapper-element">
+					<img class="box-shadow" src='images/itc19.png' alt="Picture of Italia-Covid 19 website">
+				</div>
+			</div>
+		</div>
+		<div class="scroll-gallery">
+			<div class="wrapper">
+				<div class="wrapper-element">
+					<img class="box-shadow" src='images/krypto.png' alt="Picture of Krypto app">
+				</div>
+				<div class="wrapper-element">
+					<img class="box-shadow" src='images/itc19.png' alt="Picture of Italia-Covid 19 website">
+				</div>
+				<div class="wrapper-element">
+					<img class="box-shadow" src='images/vestiq.png' alt="Picture of Vestiq demo app">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Experience -->
+	<section id="experience" class="experience-section min-vh-100 pb-5 container d-flex flex-column justify-content-center align-items-left">
+		<h2 id="experience-title" 
+			data-aos="fade-up">
+			Experiences
+		</h2>
+		<div class="mt-4 row justify-content-center">
+			<article class="col-12 col-md-6 col-lg-6"
+				data-aos="fade-up"
+				data-aos-delay="50">
+				<h5 class="d-flex flex-row align-items-center">
+					Remote Web Developer
+				</h5>
+				<p class="text-secondary">
+					Remote web developer for a leading Italian digital marketing firm, specializing in custom websites for real estate.
+				</p>
+			</article>
+			<article class="col-12 col-md-6 col-lg-6"
+				data-aos="fade-up"
+				data-aos-delay="100">
+				<h5 class="d-flex flex-row align-items-center">
+					Azure Cloud Architect
+				</h5>
+				<p class="text-secondary">
+					Azure cloud architect for a major French multinational, designing and maintaining Azure services.
+				</p>
+			</article>
+			<article class="col-12 col-md-6 col-lg-6"
+				data-aos="fade-up"
+				data-aos-delay="150">
+				<h5 class="d-flex flex-row align-items-center">
+					Dynamics 365/AX
+				</h5>
+				<p class="text-secondary">
+					Microsoft Dynamics 365 and AX developer for a major French multinational, handling development and maintenance of Dynamics 365 Finance & Operations.
+				</p>
+			</article>
+			<article class="col-12 col-md-6 col-lg-6"
+				data-aos="fade-up"
+				data-aos-delay="200">
+				<h5 class="d-flex flex-row align-items-center">
+					Software Developer
+				</h5>
+				<p class="text-secondary">
+					Java developer for an international nautical company, creating an app to manage data in the Warehouse Management Software database.
+				</p>
+			</article>
+		</div>
+	</section>
+
+	<!-- Projects -->
+	<section id="projects" class="pt-5 pb-5 container">
+		<h2 class="text-center"
+			data-aos="fade-up">
+			Projects
+		</h2>
+		<div class="d-flex flex-column gap-5">
+			<div class="d-flex flex-column flex-lg-row-reverse align-items-center">
+				<div class="col-12 col-md-12 col-lg-6 d-flex justify-content-end"
+					data-aos="fade-up"
+					data-aos-delay="50">
+					<dotlottie-player src="animations/krypto.json" background="transparent" speed="1" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+				</div>
+				<article class="col-12 col-md-12 col-lg-5">
+					<h3 data-aos="fade-up" 
+						data-aos-delay="50">
+						Krypto
+					</h3>
+					<p data-aos="fade-up"
+						data-aos-delay="100">
+						<span class="highlight-text">Krypto</span> is a simple and secure app to protect your private documents with strong encryption.
+					</p>
+					<p class="text-secondary"
+						data-aos="fade-up"
+						data-aos-delay="100">
+						It's designed to be simple but secure by using XChaCha20-Poly1305 for symmetric encryption, Argon2id for key derivation function, X25519 (Curve 25519) for secure key exchange. 
+					</p>
+					<div class="pt-4 d-flex flex-row flex-wrap gap-3" data-aos="fade-up"
+						data-aos-delay="200">
+						<a class="button" href="https://github.com/alexzava/krypto-android" target="_blank">
+							<i class="iconoir-github-circle"></i>
+							Krypto android
+						</a>
+						<a class="button" href="https://github.com/alexzava/krypto" target="_blank">
+							<i class="iconoir-github-circle"></i>
+							Krypto desktop
+						</a>
+					</div>
+				</article>
+			</div>
+
+			<div class="d-flex flex-column-reverse flex-lg-row-reverse align-items-center">
+				<article class="col-12 col-md-12 col-lg-5">
+					<h3 data-aos="fade-up">
+						Italia Covid-19
+					</h3>
+					<p data-aos="fade-up"
+						data-aos-delay="50">
+						<span class="highlight-text">Italia Covid-19</span> is a website that tracks and visually presents data and trends related to Covid-19 in Italy.
+					</p>
+					<p 	class="text-secondary" 
+						data-aos="fade-up"
+						data-aos-delay="50">
+						The data is sourced from the public repository of the Italian Civil Protection (Protezione Civile). 
+					</p>
+					<div class="pt-4 d-flex flex-row flex-wrap gap-3" data-aos="fade-up"
+						data-aos-delay="200">
+						<a class="button" href="https://italiacovid19.alexzava.com" target="_blank">
+							<i class="iconoir-internet"></i>
+							Navigate
+						</a>
+					</div>
+				</article>
+				<div class="col-12 col-md-12 col-lg-6 d-flex justify-content-start" 
+					data-aos="fade-up"
+					data-aos-delay="50">
+					<dotlottie-player src="animations/italiacovid19.json" background="transparent" speed="1" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+				</div>
+			</div>
+
+			<div class="d-flex flex-column flex-lg-row-reverse align-items-center">
+				<div class="col-12 col-md-12 col-lg-6 d-flex justify-content-end" 
+					data-aos="fade-up"
+					data-aos-delay="50">
+					<dotlottie-player src="animations/kittychat.json" background="transparent" speed="1" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+				</div>
+				<article class="col-12 col-md-12 col-lg-5">
+					<h3
+						data-aos="fade-up">
+						Kitty Chat
+					</h3>
+					<p data-aos="fade-up"
+						data-aos-delay="50">
+						<span class="highlight-text">KittyChat</span> is a secure end-to-end encrypted messaging application for Android and Web.
+					</p>
+					<p 	class="text-secondary" 
+						data-aos="fade-up"
+						data-aos-delay="50">
+						It protects your conversations with strong encryption, using the XSalsa20 stream cipher and ECC Curve25519. The server is designed to ensure that no private data is stored, safeguarding users' identities. 
+					</p>
+				</article>
 			</div>
 		</div>
 	</section>
 
+	<!-- Contact -->
+	<div id="contact" class="contact-section alt-section-color">
+		<section class="container min-vh-100 pb-5 d-flex flex-column align-items-center justify-content-center">
+			<h2 data-aos="fade-up">
+				Get in touch!
+			</h2>
+			<div class="col-12 col-md-4 col-lg-6 d-flex flex-column align-items-center">
+				<p 	class="text-center"
+					data-aos="fade-up"
+					data-aos-delay="50">
+					I am currently open to proposals for freelance remote work.
+					<br>
+					Please feel free to contact me even for a simple chat!
+				</p>
+				<div class="d-flex flex-column flex-lg-row flex-wrap gap-3 justify-content-center align-items-center"
+					data-aos="fade-up"
+					data-aos-delay="100">
+					<a href="javascript:void(0)" class="button mt-1" data-bs-toggle="modal" data-bs-target="#contact-modal">
+						<i class="iconoir-mail"></i>
+						Email
+					</a>
+					<a href="https://github.com/alexzava" target="_blank" class="button mt-1">
+						<i class="iconoir-github-circle"></i>
+						GitHub
+					</a>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!-- Email Contact Modal -->
 	<div class="modal fade" id="contact-modal" tabindex="-1">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 				</div>
 				<div class="modal-body text-center" id="contact-modal-body"></div>
 				<div class="modal-footer">
@@ -332,5 +383,9 @@
 		</div>
 	</div>
 
+	<!-- Floating Button -->
+	<div class="floating d-flex justify-content-center align-items-center">
+		<a class="button" href="#cover"><i class="iconoir-nav-arrow-up"></i></a>
+	</div>
 </body>
 </html>

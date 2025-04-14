@@ -1,70 +1,135 @@
-const noSpamValue = "bWFpbEBhbGV4emF2YS5jb20="
+const noSpamValue = "bWFpbEBhbGV4emF2YS5jb20=";
 const animatedTextStrings = [
 	"Web Developer",
 	"Backend Developer",
-	"Full Stack Developer"
+	"Software Developer",
+	"Freelance Developer"
 ];
-var animatedTextCounter = 0
-var carouselLen = 4
-
-var experiencesCarousel
-var contactModal
+var animatedTextCounter = 0;
 
 window.onload = () => {
-	// Main section animated text
-	let infoAnimatedText = document.getElementById("info-animated-text")
-	let infoAnimatedBox = document.getElementById("info-animated-box")
-	if(infoAnimatedText && infoAnimatedBox) { 
-		infoAnimatedBox.style.width = infoAnimatedText.getBoundingClientRect().width + "px"
-		infoAnimatedBox.style.height = infoAnimatedText.getBoundingClientRect().height + "px"
+	// Init AOS
+	AOS.init({
+		duration: 800,
+		once: false,
+		mirror: false,
+	});
 
-		setInterval(() => { textScrollAnimation(infoAnimatedText) }, 3000)
-	}
+	// Init GSAP plugin
+	gsap.registerPlugin(ScrollTrigger);
 
-	experiencesCarousel = document.querySelector('#experiences-carousel')
-
-	experiencesCarousel.addEventListener('slid.bs.carousel', event => {
-		carouselSetNextItem()
-		let counter = event.to + 1
-		let carouselCounterEl = document.getElementById("carousel-counter")
-		carouselCounterEl.textContent = counter + "/" + carouselLen
-	})
-
-	contactModal = document.querySelector('#contact-modal')
+	// Contact modal
+	let contactModal = document.querySelector('#contact-modal');
 	contactModal.addEventListener('hidden.bs.modal', event => {
 		let modalBody = document.querySelector("#contact-modal-body")
 		modalBody.textContent = ""
-	})
+	});
 	contactModal.addEventListener('show.bs.modal', event => {
 		let modalBody = document.querySelector("#contact-modal-body")
 		modalBody.textContent = window.atob(noSpamValue)
-	})
-
-	let copyEmailButton = document.querySelector("#copy-email-button")
+	});
+	let copyEmailButton = document.querySelector("#copy-email-button");
 	copyEmailButton.onclick = () => {
 		if(navigator.clipboard) {
-			let modalBody = document.querySelector("#contact-modal-body")
-			navigator.clipboard.writeText(window.atob(noSpamValue))
-			modalBody.textContent = "Email copied!"
+			let modalBody = document.querySelector("#contact-modal-body");
+			navigator.clipboard.writeText(window.atob(noSpamValue));
+			modalBody.textContent = "Email copied!";
 		}
+	};
+
+	// Gallery section
+	gsap.utils.toArray(".scroll-gallery").forEach((section, index) => {
+	    const w = section.querySelector(".wrapper");
+	    const [x, xEnd] =
+	    	index % 2 ?
+	    	["100%", (w.scrollWidth - section.offsetWidth) * -1] :
+	    	[w.scrollWidth * -1, 0];
+		gsap.fromTo(
+			w,
+			{ x },
+			{
+				x: xEnd,
+				scrollTrigger: {
+					trigger: section,
+					scrub: 0.5 
+				} 
+		});
+  	});
+
+	// Floating button
+  	gsap.to(".floating", {
+  		scrollTrigger: {
+  			trigger: "#about",
+  			start: "center top",
+  			toggleActions: "restart none none reverse",
+  		},
+  		visibility: "visible"
+  	});
+
+	// Animated text cover section
+	let infoAnimatedText = document.getElementById("info-animated-text");
+	let infoAnimatedBox = document.getElementById("info-animated-box");
+	if(infoAnimatedText && infoAnimatedBox) { 
+		infoAnimatedBox.style.width = infoAnimatedText.getBoundingClientRect().width + "px";
+		infoAnimatedBox.style.height = infoAnimatedText.getBoundingClientRect().height + 10 + "px";
+		setInterval(() => { textScrollAnimation(infoAnimatedText) }, 4000);
 	}
+
+	// Hide preloader
+	preloader.setAttribute("data-aos", "fade-out");
+
+	// Start title animation
+	animateTextGSAP("#cover-title-1", () => {});
+	animateTextGSAP("#cover-title-2", () => {
+		// Other animations
+		gsap.to(".cover-title-line-bottom", {
+			duration: 1,
+			scale: 1.1,
+			ease: "elastic",
+			repeat: -1,
+			yoyo: true,
+			repeatDelay: 5
+		});
+
+		gsap.to(".cover-title-line-top", {
+			duration: 1,
+			scale: 1,
+			ease: "elastic",
+			repeat: -1,
+			yoyo: true,
+			repeatDelay: 5,
+			delay: 1
+		});
+	});
 }
 
-function carouselSetNextItem() {
-	let items = document.getElementsByClassName("carousel-item")
-	let itemNext;
-	for(let i = 0; i < items.length; i++) {
-		if(items[i].classList.contains("active")) {
-			if(i+1 == items.length) {
-				itemNext = items[0]
-			} else {
-				itemNext = items[i+1]
-			}
-			break
-		}
+function animateTextGSAP(element, onComplete) {
+	var newText = "";
+	var theText = document.querySelector(element);
+	for (i = 0; i < theText.innerText.length; i++) {
+		newText += "<div>";
+		if (theText.innerText[i] == " "){newText += "&nbsp;"}
+		else {newText += theText.innerText[i];}
+		newText += "</div>";
 	}
-	document.getElementsByClassName("carousel-next-item")[0].classList.remove("carousel-next-item")
-	itemNext.classList.add("carousel-next-item")
+	theText.innerHTML = newText;
+	gsap.fromTo(element+" div", {
+		opacity:0, 
+		y:90
+	}, 
+	{
+		duration: 2, 
+		opacity:1, 
+		y:0, 
+		stagger: 0.03, 
+		ease: "elastic(1.2, 0.5)",
+		scrollTrigger: {
+			trigger: element,
+			start: "top 70%",
+			toggleActions: "restart none none none"
+		},
+		onComplete: onComplete,
+	});
 }
 
 function textScrollAnimation(element) {
@@ -73,16 +138,12 @@ function textScrollAnimation(element) {
 		top: 20
 	}, 1000, () => {
 		if(animatedTextCounter >= animatedTextStrings.length) {
-			animatedTextCounter = 0
+			animatedTextCounter = 0;
 		}
 
-		element.textContent = animatedTextStrings[animatedTextCounter]
-		animatedTextCounter++
+		element.textContent = animatedTextStrings[animatedTextCounter];
+		animatedTextCounter++;
 
-		$("#" + element.id).css({top: -20}).animate({opacity: 1, top: 0}, 1000)
-	})
-}
-
-function scrollToTop() {
-	window.scrollTo({top: 0, left: 0, behavior: "smooth"})
+		$("#" + element.id).css({top: -20}).animate({opacity: 1, top: 0}, 1000);
+	});
 }
