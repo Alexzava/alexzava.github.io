@@ -1,6 +1,6 @@
-# Alex Zava | Full Stack Developer
+# Alex Zava - Full Stack Developer
 
-mail[at]alexzava.com | [alexava.com](https://alexzava.com) | [github.com/alexzava](https://github.com/alexzava)
+mail[at]alexzava.com - [alexava.com](https://alexzava.com) - [github.com/alexzava](https://github.com/alexzava)
 
 I'm Alessandro, a full stack developer with several years of experience both as a freelancer and in international environments, where i've worked as web developer, cloud architect, and software developer.
 
@@ -20,7 +20,7 @@ I’m currently available for full-time, fully remote positions.
 
 ## Experience
 
-**Web Developer** | *Freelance* (2018 - Present)
+**Web Developer** - *Freelance* (2018 - Present)
 
 - Designed and developed websites for private clients.
 - Developed customized web solutions according to clients' needs, ensuring modern and responsive design.
@@ -28,7 +28,7 @@ I’m currently available for full-time, fully remote positions.
 
 ---
 
-**Azure Cloud Architect & Dynamics 365/AX Developer** | *Capgemini* (April 2021 - December 2022)
+**Azure Cloud Architect & Dynamics 365/AX Developer** - *Capgemini* (April 2021 - December 2022)
 
 - Managed and maintained F&O development environments in the Azure cloud for several business entities.
 - Administered user access and permissions within the Azure ecosystem.
@@ -37,7 +37,7 @@ I’m currently available for full-time, fully remote positions.
 
 ---
 
-**Remote Web Developer** | *Si4Web (PagineSì)* (2019 - 2021)
+**Remote Web Developer** - *Si4Web (PagineSì)* (2019 - 2021)
 
 - Developed custom websites for real estate companies and business showcase websites.
 - Integrated and managed back-end services, including API connections and business
@@ -46,17 +46,17 @@ management software.
 
 ---
 
-**Java Software Developer** | *SpecTec* (2016)
+**Java Software Developer** - *SpecTec* (2016)
 
 - Developed an in-house Java application to manage the database of their proprietary Warehouse Management Software.
 
 
 ## Education & Certifications
 
-- **Digital Humanities** | *University of Pisa* (2025 - Attended, not completed)
-- **Computer Science Diploma** | *ITIS Capellini Sauro* (2017)
-- **DASA DevOps Fundamentals** | *DASA* (2022 - Training successfully completed)
-- **CISCO IT Essentials Certification** | *CISCO* (2017)
+- **Digital Humanities** - *University of Pisa* (2025 - Attended, not completed)
+- **Computer Science Diploma** - *ITIS Capellini Sauro* (2017)
+- **DASA DevOps Fundamentals** - *DASA* (2022 - Training successfully completed)
+- **CISCO IT Essentials Certification** - *CISCO* (2017)
 
 ---
 
