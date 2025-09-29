@@ -30,25 +30,24 @@ I’m currently available for full-time, fully remote positions.
 
 **Azure Cloud Architect & Dynamics 365/AX Developer** - *Capgemini* (April 2021 - December 2022)
 
-- Managed and maintained F&O development environments in the Azure cloud for several business entities.
-- Administered user access and permissions within the Azure ecosystem.
+- Setup and maintenance of virtual development machines in the Azure cloud for portals such as Microsoft F&O and Dynamics 365.
+- Administered user access and permissions within the Azure ecosystem (Active Directory).
 - Worked extensively with Microsoft portals, including LCS, Azure, and Dynamics 365 F&O.
-- Developed X++ code for Microsoft Dynamics 365 F&O ERP solutions tailored to marketing companies.
+- Developed X++ code for Microsoft Dynamics 365 F&O ERP.
 
 ---
 
 **Remote Web Developer** - *Si4Web (PagineSì)* (2019 - 2021)
 
-- Developed custom websites for real estate companies and business showcase websites.
-- Integrated and managed back-end services, including API connections and business
-management software.
+- Developed over 20 custom websites for real estate companies.
+- Integrated and managed back-end services, including API connections and business management software.
 - Interacted directly with clients to gather requirements and ensure project alignment.
 
 ---
 
 **Java Software Developer** - *SpecTec* (2016)
 
-- Developed an in-house Java application to manage the database of their proprietary Warehouse Management Software.
+- Developed an in-house Java application to manage the database of their proprietary Warehouse Management Software AMOS.
 
 
 ## Education & Certifications
